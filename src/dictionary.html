@@ -1,0 +1,186 @@
+{% include "template/header.html" %}
+
+{% import "template/title.html" as title %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+
+<section class="section pd">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="javascript:void(0)"><span>Главная</span></a>
+            <a href="javascript:void(0)"><span>Статьи</span></a>
+            <a href="javascript:void(0)"><span>Словарь</span></a>
+        </div>
+
+        <h2>Словарь терминов</h2>
+
+        <div class="dictionary__search">
+            <div class="input">
+                <input type="text" placeholder="Поиск по терминам и определениям">
+                <button>
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </div>
+            <button class="btn">Найти</button>
+        </div>
+
+        <div class="alphabet">
+            <div>Русские:</div>
+            <a href="javascript:void(0)">А</a>
+            <a href="javascript:void(0)">Б</a>
+            <a href="javascript:void(0)">В</a>
+            <a href="javascript:void(0)">Г</a>
+            <a href="javascript:void(0)">Д</a>
+            <a href="javascript:void(0)">Е</a>
+            <a href="javascript:void(0)">Ё</a>
+            <a href="javascript:void(0)" class="active">Ж</a>
+            <a href="javascript:void(0)">З</a>
+            <a href="javascript:void(0)">И</a>
+            <a href="javascript:void(0)">Й</a>
+            <a href="javascript:void(0)">К</a>
+            <a href="javascript:void(0)">Л</a>
+            <a href="javascript:void(0)">М</a>
+            <a href="javascript:void(0)">Н</a>
+            <a href="javascript:void(0)">О</a>
+            <a href="javascript:void(0)">П</a>
+            <a href="javascript:void(0)">Р</a>
+            <a href="javascript:void(0)">С</a>
+            <a href="javascript:void(0)">Т</a>
+            <a href="javascript:void(0)">У</a>
+            <a href="javascript:void(0)">Ф</a>
+            <a href="javascript:void(0)">Х</a>
+            <a href="javascript:void(0)">Ц</a>
+            <a href="javascript:void(0)">Ч</a>
+            <a href="javascript:void(0)">Ш</a>
+            <a href="javascript:void(0)">Щ</a>
+            <a href="javascript:void(0)">Ъ</a>
+            <a href="javascript:void(0)">Ы</a>
+            <a href="javascript:void(0)">Ь</a>
+            <a href="javascript:void(0)">Э</a>
+            <a href="javascript:void(0)">Ю</a>
+            <a href="javascript:void(0)">Я</a>
+        </div>
+        <div class="alphabet">
+            <div>Английские:</div>
+            <a href="javascript:void(0)">A</a>
+            <a href="javascript:void(0)">B</a>
+            <a href="javascript:void(0)">C</a>
+            <a href="javascript:void(0)">D</a>
+            <a href="javascript:void(0)">E</a>
+            <a href="javascript:void(0)">F</a>
+            <a href="javascript:void(0)">G</a>
+            <a href="javascript:void(0)">H</a>
+            <a href="javascript:void(0)">I</a>
+            <a href="javascript:void(0)">J</a>
+            <a href="javascript:void(0)">K</a>
+            <a href="javascript:void(0)">L</a>
+            <a href="javascript:void(0)">M</a>
+            <a href="javascript:void(0)">N</a>
+            <a href="javascript:void(0)">O</a>
+            <a href="javascript:void(0)">P</a>
+            <a href="javascript:void(0)">Q</a>
+            <a href="javascript:void(0)">R</a>
+            <a href="javascript:void(0)">S</a>
+            <a href="javascript:void(0)">T</a>
+            <a href="javascript:void(0)">U</a>
+            <a href="javascript:void(0)">V</a>
+            <a href="javascript:void(0)">W</a>
+            <a href="javascript:void(0)">X</a>
+            <a href="javascript:void(0)">Y</a>
+            <a href="javascript:void(0)">Z</a>
+        </div>
+
+        <div class="dictionary grid four">
+            <div class="dictionary__col">
+                <div class="dictionary__letter">А</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Б</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">В</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Г</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Д</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Е</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Д</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+            <div class="dictionary__col">
+                <div class="dictionary__letter">Е</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item"><span class="highlight">интернационализироваться</span></div>
+                <div class="dictionary__item">интернационализироваться</div>
+                <div class="dictionary__item">интернационализироваться</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content section bg">
+    <div class="container">
+        <div class="content__main">
+            {{ title.item('', 'Словарь терминов', '') }}
+            <p>Словарь маркетинговых терминов&nbsp;&mdash; важная и&nbsp;незаменимая вещь профессионалов любого уровня.
+                Даже старожилы
+                маркетинга иногда могут что-то забыть. На&nbsp;конференции или бизнес-завтраке теперь всегда можно
+                подсмотреть значение термина в&nbsp;нашем глоссарии и&nbsp;продолжить разговор, не&nbsp;попадая
+                в&nbsp;неловкое положение.
+                <br> <br>
+                Тем более пригодится новичкам, которым в&nbsp;первое время постоянно необходимо держать под рукой
+                памятку.
+                Информации всегда много. Благодаря словарю Calltouch терминология быстро запомнится или просто всегда
+                будет под рукой.
+            </p>
+        </div>
+        <div class="sidebar right">
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

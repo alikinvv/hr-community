@@ -1,0 +1,210 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/article.html" as article %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>Эксперт</h2>
+
+            <div class="border-block user">
+                <img src="img/user2.png" alt="" class="user__img">
+                <div class="user__info">
+                    <div class="user__name">Михаил Ворошилов</div>
+                    <div class="user__work">UX дизайнер в компании компании/ <br>
+                        Digital studio</div>
+                    <div class="item__bottom">
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                            </svg>
+                            268
+                        </div>
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                            </svg>
+                            26
+                        </div>
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                            </svg>
+                            1256
+                        </div>
+
+                        <div class="checkbox center">
+                            <label for="c1">В избранное</label>
+                            <input type="checkbox" id="c1">
+                        </div>
+                    </div>
+                </div>
+                <div class="user__contacts">
+                    <img src="img/stars.svg" alt="" class="user__stars">
+
+                    <div class="user__rating">Рейтинг: 1234</div>
+
+                    <div class="social line gray">
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <a href="javascript:void(0)" class="active" data-tab="expert">Эксперт</a>
+                <a href="javascript:void(0)" data-tab="articles">Статьи (34)</a>
+                <a href="javascript:void(0)" data-tab="video">Видео (12)</a>
+                <a href="javascript:void(0)" data-tab="faq">Вопрос\ответ (123)</a>
+                <a href="javascript:void(0)" data-tab="contacts">Контакты</a>
+                <div class="bar"></div>
+            </div>
+
+
+            <div class="tab active" data-tab="expert">
+                <h3>Описание</h3>
+                <p>Roistat обеспечивает максимальную защиту ваших данных. Сервис расположен на множестве серверов в
+                    разных странах мира для большей надежности и обеспечения сохранности данных. Roistat обеспечивает
+                    максимальную защиту ваших данных. Сервис расположен на множестве серверов в разных странах мира для
+                    большей надежности и обеспечения сохранности данных. Roistat обеспечивает максимальную защиту ваших
+                </p>
+
+                <ul class="dot">
+                    <li>Нужно оптимизировать рекламу в Директе.</li>
+                    <li>Если можно добавить больше эффективного трафика в Google за счет низкоэффективного в Яндексе,
+                        нужно уже сейчас изменить структуру бюджета по площадкам.</li>
+                    <li>Если проблема с кампаниями в сетях, нужно поработать над публикациями отдельно по каждому
+                        элементу: картинке, тексту, призыву к действию.</li>
+                    <li>Если проблема с кампаниями в сетях, нужно поработать над публикациями отдельно </li>
+                </ul>
+
+                <h3>Услуги</h3>
+
+                <div class="features">
+                    <div>
+                        <span>Маркетинговая стратегия</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                    <div>
+                        <span>Продбор персонала в компании</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                    <div>
+                        <span>Маркетинговая стратегия</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                    <div>
+                        <span>Продбор персонала в компании</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                    <div>
+                        <span>Маркетинговая стратегия</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                    <div>
+                        <span>Продбор персонала в компании</span>
+                        <span>от 15 000 ₽ / усл.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tab" data-tab="articles"></div>
+            <div class="tab" data-tab="video"></div>
+            <div class="tab" data-tab="faq"></div>
+            <div class="tab" data-tab="contacts"></div>
+
+            <div class="divider"></div>
+
+            <h3>Статьи</h3>
+
+            <div class="grid two">
+                {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании', 'tags-3') }}
+                {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+                и использовать при') }}
+                {{ item.item('интервью', 'icon', 'white', 'lightning', '', 'a3.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании ', 'tags-3') }}
+                {{ item.item('кейс', '', '', '', '', 'a4.png', '3 вида биржевых трафиков как их читать и
+                использовать при') }}
+            </div>
+
+            <h3>Видео</h3>
+
+            <div class="grid two">
+                {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+            </div>
+
+            {% include "template/comment.html" %}
+        </div>
+        <div class="sidebar right">
+            {{ time.item('Хотите получать вакансии этой рубрики? ', 'Просто подпишитесь на уведомления!', 'Отправить
+            ссылку на почту', 'purple')}}
+            {{ time.item('Отпарвить ссылку и карточку эксперта себе на почту', '', 'Отправить ссылку на почту')}}
+
+            {{ title.item('', 'Эксперты:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+            </div>
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

@@ -1,0 +1,222 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/item.html" as item %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            <div class="date">
+                <div class="date__top">
+                    <div class="date__arrow left">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-arrow-right-bold"></use>
+                        </svg>
+                    </div>
+                    <div class="date__date">Сентябрь `21</div>
+                    <div class="date__arrow right">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-arrow-right-bold"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="date__filter">
+                    <div class="date__title">Фильтр мероприятий</div>
+                    <div class="checkbox center">
+                        <input id="s1" type="checkbox">
+                        <label for="s1">Offline</label>
+                    </div>
+                    <div class="checkbox yellow center">
+                        <input id="s2" type="checkbox">
+                        <label for="s2">Online</label>
+                    </div>
+                    <div class="checkbox blue center">
+                        <input id="s3" type="checkbox">
+                        <label for="s3">Callday</label>
+                    </div>
+                    <div class="checkbox pink center">
+                        <input id="s4" type="checkbox">
+                        <label for="s4">Онлайн-марафон</label>
+                    </div>
+                    <div class="checkbox purple center">
+                        <input id="s5" type="checkbox">
+                        <label for="s5">Вебинар</label>
+                    </div>
+                </div>
+            </div>
+
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>Мероприятия</h2>
+
+            <div class="sort left">
+                <div class="sort__title">Формат:</div>
+                <a href="javascript:void(0)" class="btn">Вывести мероприятия списком</a>
+            </div>
+
+            <div class="calendar">
+                <div class="calendar__header">
+                    <div>Пн</div>
+                    <div>Вт</div>
+                    <div>Ср</div>
+                    <div>Чт</div>
+                    <div>Пт</div>
+                    <div>Сб</div>
+                    <div>Вс</div>
+                </div>
+                <div class="calendar__row">
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">29</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">30</div>
+                        <div class="calendar__event yellow">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">1</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">2</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">3</div>
+                        <div class="calendar__event yellow">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">4</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">5</div>
+                    </div>
+                </div>
+                <div class="calendar__row">
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">29</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">30</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">1</div>
+                        <div class="calendar__event blue">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">2</div>
+                    </div>
+                    <div class="calendar__cell active">
+                        <div class="calendar__date">3</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">4</div>
+                        <div class="calendar__event pink">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">5</div>
+                    </div>
+                </div>
+                <div class="calendar__row">
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">29</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">30</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">1</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">2</div>
+                        <div class="calendar__event green">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">3</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">4</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">5</div>
+                    </div>
+                </div>
+                <div class="calendar__row">
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">29</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date gray">30</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">1</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">2</div>
+                        <div class="calendar__event yellow">
+                            <div class="calendar__time">11:00</div>
+                            <div class="calendar__text">Вебинар: 3 совета как как как как</div>
+                        </div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">3</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">4</div>
+                    </div>
+                    <div class="calendar__cell">
+                        <div class="calendar__date">5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="grid three">
+                {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+                {{ item.item('конференция', 'price', '', '', '120 000 ₽ ', 'a7.png', 'Тренинг “Запуск своего
+                собственного
+                онлайн-проекта', 'tags-3', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

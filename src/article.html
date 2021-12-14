@@ -1,0 +1,353 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/article.html" as article %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Статьи</span></a>
+                <a href="javascript:void(0)"><span>Что такое интернет вещей: принцип работы и примеры использования Что
+                        такое интернет вещей: принцип работы и примеры использования</span></a>
+            </div>
+
+            <h2>Что такое интернет вещей: принцип работы и примеры использования</h2>
+
+            <div class="article__features">
+                <div class="checkbox center">
+                    <label for="c1">В избранное</label>
+                    <input type="checkbox" id="c1">
+                </div>
+                <div class="item__bottom">
+                    <div class="item__bottom-item">11. 11. 2021</div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                        </svg>
+                        268
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                        </svg>
+                        2688
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                        </svg>
+                        26
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-time"></use>
+                        </svg>
+                        5 минут
+                    </div>
+                </div>
+                <div class="social line gray">
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="article__top">
+                <a href="javascript:void(0)" class="article__user">
+                    <img src="img/user1.png" alt="">
+                    <div>
+                        <div class="article__user-name">Елизавета Титова</div>
+                        <div class="article__user-work">Редактор блога <br> компании</div>
+                    </div>
+                </a>
+                <div class="rating">
+                    <img src="img/stars.svg" alt="">
+                    <span>Средняя оценка: <strong>5</strong></span>
+                </div>
+                <div class="play">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-play"></use>
+                    </svg>
+                    Прослушать <br> новость
+                </div>
+            </div>
+
+            <img src="img/article.png" alt="" class="article__img">
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
+                поисках работы открыто, не анонимно, то мы также отправим информацию о вас </p>
+
+            <div class="border-block">
+                <h3>Читайте в этой статье:</h3>
+                <div class="filter__link">Кадровое делопроизводство</div>
+                <div class="filter__link">Что такое трафик и как его посчитать</div>
+                <div class="filter__link">Как провести мозговой штурм среди сотрудников Как провести мозговой штурм
+                    среди сотрудников</div>
+                <div class="filter__link">Как провести мозговой штурм среди сотрудников</div>
+            </div>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <span
+                    class="highlight">Если вы в поисках работы открыто</span>, не анонимно, то мы также отправим
+                информацию о вас </p>
+
+            <div class="tip">Читать еще: «Основы медиапланирования в контекстной рекламе: главные шаги»</div>
+
+            <div class="notice">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                </svg>
+                <div>
+                    Если вы&nbsp;находитесь в&nbsp;поиске работы, связанной с&nbsp;HR направлением,
+                    то&nbsp;вы&nbsp;можете
+                    оставить заявку и&nbsp;подгрузить ваше резюме.Мы уведомим вас о&nbsp;появлении новых вакансий под
+                    вашу&nbsp;HR специальность. Если вы&nbsp;в&nbsp;поисках работы открыто, не&nbsp;анонимно,
+                    то&nbsp;мы&nbsp;также отправим информацию
+                    о&nbsp;вас
+                </div>
+            </div>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <span
+                    class="highlight">Если вы в поисках работы открыто</span>, не анонимно, то мы также отправим
+                информацию о вас </p>
+
+            <div class="blockquote">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-quotes"></use>
+                </svg>
+                <div>
+                    Если проблема с&nbsp;кампаниями в&nbsp;сетях, нужно поработать над публикациями отдельно
+                    по&nbsp;каждому элементу:
+                    картинке, тексту, призыву к&nbsp;действию. <br> <br>
+                    Если проблема с&nbsp;кампаниями в&nbsp;сетях, нужно поработать над публикациями отдельно
+                    по&nbsp;каждому элементу
+
+                    <a href="javascript:void(0)" class="article__user">
+                        <img src="img/user1.png" alt="">
+                        <div>
+                            <div class="article__user-name">Елизавета Титова</div>
+                            <div class="article__user-work">Редактор блога <br> компании</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <span
+                    class="highlight">Если вы в поисках работы открыто</span>, не анонимно, то мы также отправим
+                информацию о вас </p>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
+                поисках работы открыто, не анонимно, то мы также отправим информацию о вас </p>
+
+            <div class="notice green">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-light"></use>
+                </svg>
+                <div>
+                    <h3>Заключение</h3>
+                    Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                    подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы
+                    в поисках работы открыто, не анонимно, то мы также отправим информацию о вас <br> <br>
+                    Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                    подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы
+                    в поисках работы открыто, не анонимно, то мы также отправим информацию о вас
+                </div>
+            </div>
+
+            <div class="article__pagination">
+                <a href="javascript:void(0)" class="btn btn-outline left">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                    Предыдущая статья
+                </a>
+
+                <a href="javascript:void(0)" class="btn" scrollto="">
+                    Обсудить статью
+
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </a>
+
+                <a href="javascript:void(0)" class="btn btn-outline right">
+                    Следующая статья
+
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="find">Нашли опечатку? Выделите текст и нажмите Ctrl+Enter</div>
+
+            <div class="checkbox fcn">
+                <label for="">Рубрики:</label>
+                <div class="tags">
+                    <div>Менеджмент</div>
+                    <div>HR бренд</div>
+                    <div>Маркетинг</div>
+                </div>
+            </div>
+
+            <div class="author">
+                <span>Автор: </span>
+                <a href="javascript:void(0)" class="article__user">
+                    <img src="img/user1.png" alt="">
+                    <div>
+                        <div class="article__user-name">Елизавета Титова</div>
+                    </div>
+                </a>
+                <div class="checkbox slide center">
+                    <input id="c2" type="checkbox">
+                    <label for="c2"></label>
+                    <span>Подписаться на эксперта</span>
+                </div>
+            </div>
+
+            <div class="article__bottom">
+                <div class="article__bottom-item">
+                    <h4>Вам понравился материал?</h4>
+                    <div class="rating">
+                        <img src="img/stars.svg" alt="">
+                        <span>Средняя оценка: <strong>5</strong></span>
+                    </div>
+                </div>
+                <div class="article__bottom-item">
+                    <h4>Поделиться с друзьями</h4>
+
+                    <div class="social line gray">
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% include "template/telegram.html" %}
+
+            <div class="desc">
+                <div><span>Источник:</span> ссылка</div>
+                <div><span>Фотографии:</span> Шатерсток, фрипик</div>
+            </div>
+
+            <div class="divider"></div>
+
+            {% include "template/comment.html" %}
+
+            {{ title.item('', 'Рекомендуем почитать', '') }}
+            <div class="grid two mb-100">
+                {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании', 'tags-3') }}
+                {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+                и использовать при') }}
+                {{ item.item('интервью', 'icon', 'white', 'lightning', '', 'a3.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании ', 'tags-3') }}
+                {{ item.item('кейс', '', '', '', '', 'a4.png', '3 вида биржевых трафиков как их читать и
+                использовать при') }}
+            </div>
+        </div>
+        <div class="sidebar right">
+            {% include "template/sidebar/social.html" %}
+            {{ time.item('Нет времени читать?', '', 'Отправить PDF на почту')}}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            <h2>Что прочитать: </h2>
+            {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+            читать и использовать при инвестирировании', 'tags-2') }}
+            {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+            и использовать при') }}
+
+            <h2>Что посмотреть: </h2>
+            {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+            инвестирировании')}}
+            {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+
+            {{ title.item('', 'Эксперты:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+            </div>
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            {{ title.item('', 'HR IT проект', 'Все') }}
+            {% include "template/solve.html" %}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

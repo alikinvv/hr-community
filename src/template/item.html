@@ -1,0 +1,78 @@
+{% macro item(category, right, white, icon, price, img, title, tags, bottom, userImg, userName) %}
+
+<a href="javascript:void(0)" class="item">
+    <div class="item__category">{{ category }}</div>
+
+    {% if right == 'icon' %}
+    <div class="item__icon {{ white }}">
+        <svg class="icon">
+            <use xlink:href="img/symbol-defs.svg#icon-{{ icon }}"></use>
+        </svg>
+    </div>
+    {% endif %}
+
+    {% if right == 'price' %}
+    <div class="item__price">
+        {{ price }}
+    </div>
+    {% endif %}
+
+    <img class="item__img" src="img/{{ img }}" alt="">
+    <div class="item__body">
+
+        {% if userImg|length %}
+        <div class="item__user">
+            <img src="img/{{ userImg }}" alt="">
+            {{ userName | safe }}
+        </div>
+        {% endif %}
+
+        <div class="item__title">{{ title }}</div>
+        <div class="tags">
+            <div>Менеджмент</div>
+            {% if tags == 'tags-2' %}
+            <div>HR бренд</div>
+            {% elif tags == 'tags-3' %}
+            <div>HR бренд</div>
+            <div>Маркетинг</div>
+            {% endif %}
+        </div>
+
+        {% if bottom == 'online' %}
+        <div class="item__online">
+            <div class="item__online-icon">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-wifi"></use>
+                </svg>
+                Онлайн
+            </div>
+
+            1 янв. - 3 янв. | 10:00 - 18:00 (Мск)
+        </div>
+        {% else %}
+        <div class="item__bottom">
+            <div class="item__bottom-item">11. 11. 2021</div>
+            <div class="item__bottom-item">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                </svg>
+                268
+            </div>
+            <div class="item__bottom-item">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                </svg>
+                2688
+            </div>
+            <div class="item__bottom-item">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                </svg>
+                26
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</a>
+
+{% endmacro %}

@@ -1,0 +1,218 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/expert.html" as expert %}
+{% import "template/title.html" as title %}
+{% import "template/item.html" as item %}
+{% import "template/article.html" as article %}
+{% import "template/rubric.html" as rubric %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <div class="slider">
+                <div class="swiper slider__main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/main-slide.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/main-slide.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/main-slide.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper slider__nav">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span>Авторизуйтесь, чтобычтоб получить скидку</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span>Страхование техники от утраты и тд</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span>НR бренд. Как построить в фарм компании</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{ title.item('fire', 'Новинки для чтения', 'Больше новинок') }}
+            <div class="grid two">
+                {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании', 'tags-3') }}
+                {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+                и использовать при') }}
+                {{ item.item('интервью', 'icon', 'white', 'lightning', '', 'a3.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании ', 'tags-3') }}
+                {{ item.item('кейс', '', '', '', '', 'a4.png', '3 вида биржевых трафиков как их читать и
+                использовать при') }}
+            </div>
+        </div>
+        <div class="sidebar right">
+            {% include "template/sidebar/social.html" %}
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+            {{ banner.item('banner2.png', 'Рекламный <br> баннер 2', 'type') }}
+        </div>
+    </div>
+</section>
+
+<section class="section bg">
+    <div class="container">
+        {{ title.item('calendar', 'Мероприятия и конференции', 'Все события') }}
+
+        <div class="grid three">
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+            {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+            {{ item.item('конференция', 'price', '', '', '120 000 ₽ ', 'a7.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-3', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+        </div>
+    </div>
+</section>
+
+<section class="content section">
+    <div class="container">
+        <div class="content__main">
+            {{ title.item('school', 'Академия и обучение', 'Все видео') }}
+            <div class="grid three">
+                {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                {{ article.item('s3.png', 'Двуличный kpi как правильные показатели приводят к неправильным выводам')}}
+                {{ article.item('s4.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s5.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                {{ article.item('s6.png', 'Двуличный kpi как правильные показатели приводят к неправильным выводам')}}
+            </div>
+        </div>
+        <div class="sidebar right">
+            {{ title.item('user', 'Эксперты:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+                {{ expert.item('user3.png', 'Александр Нежельский') }}
+                {{ expert.item('user4.png', 'Александр Нежельский') }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg">
+    <div class="container">
+        {{ title.item('blank', 'Рубрики нашей академии', 'Все рубрики') }}
+
+        <div class="grid three">
+            {{ rubric.item('Лидерство') }}
+            {{ rubric.item('Маркетинг') }}
+            {{ rubric.item('Творческий потенциал в компании') }}
+            {{ rubric.item('Благополучие компании') }}
+            {{ rubric.item('Менеджмент') }}
+            {{ rubric.item('Творческий потенциал в компании') }}
+            {{ rubric.item('HR бренд') }}
+            {{ rubric.item('Карьера') }}
+            {{ rubric.item('Творческий потенциал в компании') }}
+            {{ rubric.item('HR') }}
+            {{ rubric.item('Маркетинг') }}
+            {{ rubric.item('Пульс опросы') }}
+        </div>
+    </div>
+</section>
+
+<section class="content section">
+    <div class="container">
+        <div class="content__main">
+            {{ title.item('case', 'Вакансии и стажировки', 'Все вакансии') }}
+            <div class="grid three">
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+                {% include "template/vacancy.html" %}
+            </div>
+        </div>
+        <div class="sidebar right">
+            {{ title.item('fire', 'Что новенького?', '', 'red') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
+        </div>
+    </div>
+</section>
+
+{% include "template/work.html" %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {{ title.item('sale', 'Акции', '', 'red') }}
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+        </div>
+        <div class="content__main">
+            {{ title.item('mac', 'Решения для автоматизации (HR IT)', 'Все решения') }}
+            <div class="grid two">
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+            </div>
+        </div>
+        <div class="sidebar right">
+            {{ title.item('puzzle', 'Тесты', '') }}
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{ title.item('book', 'Магазин книг', 'Все книги') }}
+
+        <div class="grid six">
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{ title.item('book', 'Полезные материалы, руководства и гайды', 'Все материалы') }}
+
+        <div class="grid six">
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

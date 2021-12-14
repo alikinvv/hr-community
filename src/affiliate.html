@@ -1,0 +1,123 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <h2>Реферальная программа</h2>
+
+            <div class="affiliate">
+                <span>Сылкаапаролддщ\jk.ru</span>
+                <a href="javascript:void(0)" class="btn">Скопировать</a>
+            </div>
+
+            <div class="datepicker">
+                <div class="datepicker__main"></div>
+                <input type="text" id="dateFrom" placeholder="Выбрать дату" class="datepicker__input">
+                <input type="text" id="dateTo" placeholder="Выбрать дату" class="datepicker__input">
+                <a href="javascript:void(0)" class="btn">Применить</a>
+            </div>
+
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Аккаунт</th>
+                        <th>Дата регистрации</th>
+                        <th>Статус</th>
+                        <th>Токены</th>
+                    </tr>
+                    <tr>
+                        <td>Почта</td>
+                        <td>24.03</td>
+                        <td>на модерации</td>
+                        <td><span class="green">+3</span></td>
+                    </tr>
+                    <tr>
+                        <td>Почта@mail.ru</td>
+                        <td>24.03</td>
+                        <td>принято</td>
+                        <td><span class="gray2">+3</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><a href="javascript:void(0)" class="btn center">Показать еще</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="buttons">
+                <a href="javascript:void(0)" class="buttons__item">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-marketing"></use>
+                    </svg>
+                    <span>Используйте наши <br> маркетинговые <br> материалы</span>
+                </a>
+                <a href="javascript:void(0)" class="buttons__item">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-globe"></use>
+                    </svg>
+                    <span>Размещайте со своей <br> реферальной ссылкой <br> материалы</span>
+                </a>
+                <a href="javascript:void(0)" class="buttons__item">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-money2"></use>
+                    </svg>
+                    <span>Получайте <br> вознаграждение до 30% <br> от стоимости продукта</span>
+                </a>
+            </div>
+
+            <div class="pdf">
+                <div class="pdf__list">
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Баннеры
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/bookmark2.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Лендинги
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/lend.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Логотипы
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/star2.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Баннеры
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/bookmark2.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Лендинги
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/lend.svg" alt="">
+                    </a>
+                    <a href="javascript:void(0)" class="pdf__item">
+                        Логотипы
+                        <div class="pdf__format">PDF</div>
+                        <img src="img/icons/star2.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

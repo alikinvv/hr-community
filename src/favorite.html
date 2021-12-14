@@ -1,0 +1,90 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/item.html" as item %}
+{% import "template/article.html" as article %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <h2>Порекомендуйте статью к публикации</h2>
+
+            <div class="tabs">
+                <a data-tab="articles" href="javascript:void(0)" class="active">Статьи</a>
+                <a data-tab="events" href="javascript:void(0)">Мероприятия</a>
+                <a data-tab="experts" href="javascript:void(0)">Эксперты</a>
+                <a data-tab="videos" href="javascript:void(0)">Видео</a>
+                <a data-tab="materials" href="javascript:void(0)">Материалы</a>
+                <a data-tab="vacancy" href="javascript:void(0)">Вакансии</a>
+                <div class="bar"></div>
+            </div>
+
+            <div class="tab border active" data-tab="articles">
+                <div class="grid three">
+                    {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+                    читать и использовать при инвестирировании', 'tags-3') }}
+                    {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+                    и использовать при') }}
+                    {{ item.item('интервью', 'icon', 'white', 'lightning', '', 'a3.png', '3 вида биржевых трафиков как
+                    их
+                    читать и использовать при инвестирировании ', 'tags-3') }}
+                </div>
+
+                <div class="grid three">
+                    {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего
+                    собственного
+                    онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                    {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего
+                    собственного
+                    онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                    {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего
+                    собственного
+                    онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                </div>
+
+                <div class="grid three">
+                    {{ expert.item('user1.png', 'Александр Нежельский') }}
+                    {{ expert.item('user2.png', 'Александр Нежельский') }}
+                    {{ expert.item('user2.png', 'Александр Нежельский') }}
+                </div>
+
+                <div class="grid three">
+                    {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                    инвестирировании')}}
+                    {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                    {{ article.item('s3.png', 'Двуличный kpi как правильные показатели приводят к неправильным
+                    выводам')}}
+                </div>
+
+                <div class="grid five">
+                    {% include "template/book.html" %}
+                    {% include "template/book.html" %}
+                    {% include "template/book.html" %}
+                    {% include "template/book.html" %}
+                    {% include "template/book.html" %}
+                </div>
+
+                <div class="grid three">
+                    {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                    {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                    {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                </div>
+            </div>
+            <div class="tab border" data-tab="events"></div>
+            <div class="tab border" data-tab="videos"></div>
+            <div class="tab border" data-tab="materials"></div>
+            <div class="tab border" data-tab="vacancy"></div>
+        </div>
+    </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

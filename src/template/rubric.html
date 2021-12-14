@@ -1,0 +1,13 @@
+{% macro item(text) %}
+<a href="javascript:void(0)" class="rubric">
+    <svg class="icon">
+        <use xlink:href="img/symbol-defs.svg#icon-chat"></use>
+    </svg>
+    {{ text }}
+    <div class="more w-30">
+        <svg class="icon">
+            <use xlink:href="img/symbol-defs.svg#icon-arrow-right-bold"></use>
+        </svg>
+    </div>
+</a>
+{% endmacro %}

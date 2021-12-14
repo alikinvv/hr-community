@@ -1,0 +1,7 @@
+{% macro item(img, title) %}
+<a href="javascript:void(0)" class="article">
+    <img class="article__img" src="img/{{ img }}" alt="">
+    <div class="article__title">{{ title }}</div>
+    <button class="btn">Смотреть видео</button>
+</a>
+{% endmacro %}

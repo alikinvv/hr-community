@@ -1,0 +1,275 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/article.html" as article %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Статьи</span></a>
+            </div>
+
+            <div class="title-photo">
+                <img src="img/slack.png" alt="">
+                <div>
+                    <h2>Управленческое консультирование</h2>
+                    <span>Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в покупку за
+                        2 месяца</span>
+                </div>
+            </div>
+
+            <div class="article__features">
+                <a href="javascript:void(0)" class="btn">Сайт сервиса</a>
+                <div class="item__bottom">
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                        </svg>
+                        268
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                        </svg>
+                        2688
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                        </svg>
+                        26
+                    </div>
+                </div>
+                <div class="checkbox center">
+                    <label for="c1">В избранное</label>
+                    <input type="checkbox" id="c1">
+                </div>
+                <div class="rating">
+                    <img src="img/stars.svg" alt="">
+                    <span>Средняя оценка: <strong>5</strong></span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="title fcsb">
+                <h2>Заголовок</h2>
+
+                <div class="vacancy__video">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-play"></use>
+                    </svg>
+                    Видео обращение <br> от компании
+                </div>
+            </div>
+
+            <h3>Описание предложения</h3>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <h3>Описание предложения</h3>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <div class="find">
+                <div class="social line gray">
+                    <span>Поделиться с друзьями</span>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <h2>О сервисе</h2>
+
+            <p>Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в покупку за 2 месяца
+                Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в покупку за 2 месяца
+            </p>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <h2>Услуги сервиса</h2>
+
+            <div class="service__list">
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Автоматическое создание объявленик
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Автоматическое создание объявленик
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Автоматическое создание объявленик
+                </div>
+            </div>
+
+            <h2>Преимущества сервиса</h2>
+
+            <div class="grid three">
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+                <div class="service__checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                    Разработанная стратегия маркетинга\
+                </div>
+            </div>
+
+            <div class="article__pagination center">
+                <a href="javascript:void(0)" class="btn" scrollto="">
+                    Обсудить статью
+
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </a>
+            </div>
+
+            {% include "template/telegram.html" %}
+
+            <h2>Аналоги</h2>
+
+            <div class="grid two">
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+            </div>
+
+            <h2>Может быть полезно</h2>
+
+            <div class="grid two">
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+            </div>
+
+            <div class="divider"></div>
+
+            {% include "template/comment.html" %}
+        </div>
+        <div class="sidebar right">
+            {{ time.item('Хотите получать вакансии этой рубрики? ', 'Просто подпишитесь на уведомления!', 'Отправить
+            ссылку на почту', 'purple')}}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

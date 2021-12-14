@@ -1,0 +1,388 @@
+.header {
+    padding: 27px 0 19px;
+    border-bottom: 1px solid #d2dbe3;
+
+    .container {
+        @include fcn;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 16px;
+        transition: $trans;
+        @include fcn;
+
+        &:hover {
+            color: $blue;
+
+            span {
+                color: $blue;
+            }
+
+            .icon {
+                fill: $blue;
+            }
+        }
+
+        .icon {
+            margin-right: 8px;
+            font-size: 28px;
+            transition: $trans;
+        }
+
+        span {
+            margin-right: 5px;
+            transition: $trans;
+        }
+    }
+
+    &__search {
+        margin-left: auto;
+        @include fce;
+        width: 50%;
+        padding-right: 19px;
+        margin-right: 25px;
+        border-right: 1px solid $gray;
+
+        &.active .input {
+            width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+            @include fcc;
+            margin-left: 15px;
+
+            &:hover .icon {
+                fill: $blue;
+            }
+        }
+
+        .icon {
+            fill: #696969;
+            font-size: 24px;
+            transition: $trans;
+        }
+
+        .input {
+            width: 0;
+            transition: $trans;
+        }
+    }
+
+    &__login {
+        @include fcn;
+
+        a {
+            font-weight: 600;
+
+            &:not(.btn):hover {
+                color: $blue;
+            }
+        }
+
+        .btn {
+            margin-left: 22px;
+        }
+    }
+
+    &__user {
+        position: relative;
+    }
+
+    &__toggle {
+        @include fcn;
+        cursor: pointer;
+        user-select: none;
+
+        & > img {
+            width: 36px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-right: 8px;
+        }
+
+        & > .icon {
+            fill: $gray;
+            font-size: 12px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        bottom: -41px;
+        opacity: 0;
+        pointer-events: none;
+        user-select: none;
+        right: 0;
+        transform: translateY(100%);
+        z-index: 3;
+        background: #ffffff;
+        box-shadow: 0px 12px 15px rgba(57, 57, 57, 0.2);
+        width: 310px;
+        padding: 20px;
+        transition: $trans;
+
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+            bottom: -21px;
+        }
+    }
+
+    &__info {
+        @include fcn;
+        background: #f6faff;
+        padding: 16px 14px;
+        margin-bottom: 13px;
+
+        img {
+            width: 44px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+    }
+
+    &__email {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        color: $gray;
+        margin-bottom: 8px;
+        transition: $trans;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__phone {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        color: $gray;
+        transition: $trans;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    &__link {
+        display: block;
+        @include fcn;
+        transition: $trans;
+        padding: 10px 20px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+
+        &:hover {
+            background: #f6faff;
+        }
+
+        .icon {
+            fill: $yellow;
+            font-size: 18px;
+            margin-right: 11px;
+        }
+    }
+
+    &__notification {
+        position: relative;
+        margin-right: 33px;
+
+        &-wrap {
+            cursor: pointer;
+        }
+
+        &-tip {
+            position: absolute;
+            bottom: -44px;
+            right: 0;
+            transform: translateY(100%);
+            background: #f6faff;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+            padding: 19px 30px;
+            font-weight: 500;
+            line-height: 1.4;
+            width: 265px;
+            z-index: 3;
+            transition: $trans;
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+
+            a {
+                display: block;
+                color: $blue;
+                text-decoration: underline;
+                margin-top: 7px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+                user-select: initial;
+                bottom: -24px;
+            }
+        }
+
+        &:hover .icon {
+            fill: $blue;
+        }
+
+        span {
+            font-size: 11px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $yellow;
+            @include fcc;
+            line-height: 0;
+            font-weight: bold;
+            position: absolute;
+            top: -4px;
+            right: -9px;
+            border: 2px solid #fff;
+        }
+
+        .icon {
+            font-size: 26px;
+            transition: $trans;
+            fill: $gray;
+        }
+    }
+}
+
+.menu {
+    &__wrap {
+        margin-left: -14px;
+        @include fcn;
+
+        & > div,
+        a {
+            padding: 21px 15px;
+            transition: $trans;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                background: #f0f3f8;
+                color: $text;
+
+                .menu__dropdown {
+                    opacity: 1;
+                    bottom: 0;
+                    pointer-events: all;
+                    user-select: initial;
+                }
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        transform: translateY(100%);
+        z-index: 2;
+        background: #fff;
+        box-shadow: 0px 12px 15px rgba(57, 57, 57, 0.2);
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        pointer-events: none;
+        user-select: none;
+        transition: $trans;
+
+        a {
+            padding: 9px 15px;
+            @include fcn;
+        }
+
+        .icon {
+            font-size: 11px;
+            fill: $yellow;
+            margin-right: 6px;
+        }
+    }
+}
+
+.submenu {
+    padding: 17px 0;
+    background: #272a31;
+    color: #fff;
+
+    .container {
+        @include fcn;
+    }
+
+    &__main {
+        font-weight: 700;
+        @include fcn;
+        padding-right: 26px;
+        margin-right: 26px;
+        transition: $trans;
+        border-right: 1px solid $gray;
+        font-size: 18px;
+        flex-shrink: 0;
+
+        &:hover {
+            color: $yellow;
+        }
+
+        .icon {
+            fill: $red;
+            font-size: 21px;
+            margin-right: 7px;
+            transition: $trans;
+        }
+    }
+
+    &__menu {
+        @include fcn;
+        border-right: 1px solid $gray;
+        margin-right: 25px;
+
+        a {
+            @include fcn;
+            transition: $trans;
+            margin-right: 2.6vw;
+            font-size: 18px;
+
+            .icon {
+                font-size: 20px;
+                fill: $yellow;
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    &__text {
+        line-height: 1.4;
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+    .btn {
+        padding: 8px 20px;
+    }
+}

@@ -1,0 +1,64 @@
+{% include "template/header.html" %}
+
+<section class="section login">
+    <div class="container">
+        <h2>Регистрация</h2>
+        <p>Если вы находитесь в поиске работы, связанной с <br> HR направлением, то вы можете</p>
+
+        <form action="">
+            <div class="input">
+                <input type="text" placeholder="Имя">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="login__flex">
+                <div class="phone">
+                    <div class="phone__toggle">
+                        <img src="img/rus.png" alt="">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                        </svg>
+                    </div>
+                    <div class="phone__dropdown">
+                        <div><img src="img/rus.png" alt=""></div>
+                        <div><img src="img/rus.png" alt=""></div>
+                        <div><img src="img/rus.png" alt=""></div>
+                    </div>
+                    <div class="phone__body">
+                        <input type="text" class="sm phone-mask" placeholder="(999)-99-99">
+                    </div>
+                </div>
+                <button class="btn btn-outline width">Получить код</button>
+            </div>
+            <div class="login__flex">
+                <div class="input">
+                    <input type="text" placeholder="Код из СМС">
+                </div>
+                <button class="btn btn-outline width">Подтвердить код</button>
+                <div class="checked">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-checked"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="input password">
+                <input type="password" placeholder="Пароль">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-eye-fill"></use>
+                </svg>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="c1">
+                <label for="c1">Нажимая кнопку «Зарегистрироваться», я <br> соглашаюсь с публичной офертой ООО «ФинСофт
+                </label>
+            </div>
+            <button class="btn">Зарегистрироваться</button>
+
+            <div class="registration">У вас уже есть аккаунт? <a href="javascript:void(0)">Войти</a> или <a
+                    href="javascript:void(0)">Восстановить пароль</a></div>
+        </form>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

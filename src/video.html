@@ -1,0 +1,156 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/article.html" as article %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Статьи</span></a>
+            </div>
+
+            <h2>Оценка и снижение нежелательной текучести в организации</h2>
+
+            <div class="article__features">
+                <div class="rating">
+                    <img src="img/stars.svg" alt="">
+                    <span>Средняя оценка: <strong>5</strong></span>
+                </div>
+
+                <div>
+                    <div class="item__bottom">
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                            </svg>
+                            268
+                        </div>
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                            </svg>
+                            2688
+                        </div>
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                            </svg>
+                            26
+                        </div>
+                    </div>
+                    <div class="checkbox center">
+                        <label for="c1">В избранное</label>
+                        <input type="checkbox" id="c1">
+                    </div>
+                </div>
+
+                <div class="social line gray">
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <iframe width="100%" height="420" src="https://www.youtube.com/embed/SHniorJLQSo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <p>Рост нежелательной текучести сотрудников – частая проблема в организациях. Согласно исследованиям Gallup,
+                замена одного ушедшего сотрудника может обойтись организации в сумму от 5 до 24 его месячных окладов.
+            </p>
+            <p>Рост нежелательной текучести сотрудников – частая проблема в организациях. Согласно исследованиям Gallup,
+                замена одного ушедшего сотрудника может обойтись организации в сумму от 5 до 24 его месячных окладов.
+            </p>
+            <p>Рост нежелательной текучести сотрудников – частая проблема в организациях. Согласно исследованиям Gallup,
+                замена одного ушедшего сотрудника может обойтись организации в сумму от 5 до 24 его месячных окладов.
+            </p>
+
+            <div class="article__pagination center">
+                <a href="javascript:void(0)" class="btn" scrollto="">
+                    Обсудить видео ролик
+
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Рекомендуем посмотреть</h2>
+
+            <div class="grid two">
+                {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                {{ article.item('s3.png', 'Двуличный kpi как правильные показатели приводят к неправильным выводам')}}
+                {{ article.item('s4.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+            </div>
+
+            <div class="divider"></div>
+
+            {% include "template/comment.html" %}
+        </div>
+        <div class="sidebar right">
+            {{ time.item('Хотите получать вакансии этой рубрики? ', 'Первыми получайте новые видео ролики и курсы в
+            сфере HR индустрии', 'Подписаться', 'purple')}}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

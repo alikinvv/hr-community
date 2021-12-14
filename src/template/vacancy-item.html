@@ -1,0 +1,33 @@
+{% macro item(title) %}
+<a href="javascript:void(0)" class="vacancyItem sidebar-border">
+    <div class="vacancy__title">{{ title }}</div>
+    <div class="vacancy__category">Внутренние коммуникации</div>
+    <div class="vacancy__company">
+        <img src="img/fendi.png" alt="">
+        Компания компания
+    </div>
+    <div class="vacancy__features">
+        <div>
+            <svg class="icon {{ color }}">
+                <use xlink:href="img/symbol-defs.svg#icon-money"></use>
+            </svg>
+            <strong>от 145 000 ₽ </strong>
+        </div>
+        <div>
+            <svg class="icon {{ color }}">
+                <use xlink:href="img/symbol-defs.svg#icon-time"></use>
+            </svg>
+            до 1 года
+        </div>
+    </div>
+    <div class="vacancy__text">Наше агенство более 9 лет подбирает менеджеров для старта...</div>
+    <div class="vacancyItem__bottom">
+        <div class="vacancy__date">20.11.2021 г.</div>
+        <div class="more w-30">
+            <svg class="icon">
+                <use xlink:href="img/symbol-defs.svg#icon-arrow-right-bold"></use>
+            </svg>
+        </div>
+    </div>
+</a>
+{% endmacro %}

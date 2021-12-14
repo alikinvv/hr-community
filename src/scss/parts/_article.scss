@@ -1,0 +1,524 @@
+.article {
+    padding: 8px;
+    border: 1px solid transparent;
+    transition: $trans;
+    display: block;
+
+    &:hover {
+        border-color: $yellow;
+        background: #f6faff;
+    }
+
+    &__header {
+        @include fesb;
+        margin-bottom: 19px;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            color: $gray;
+        }
+    }
+
+    &__img {
+        margin-bottom: 38px;
+        width: 100%;
+    }
+
+    &__title {
+        transition: $trans;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 21px;
+    }
+
+    .btn {
+        padding: 12px 37px;
+    }
+
+    &__features {
+        @include fcsb;
+
+        & + .divider {
+            margin-top: 40px;
+        }
+    }
+
+    &__top {
+        @include fcsb;
+        margin-top: 33px;
+        margin-bottom: 33px;
+    }
+
+    &__user {
+        @include fsn;
+
+        &:hover {
+            .article__user-name {
+                color: $text;
+            }
+        }
+
+        img {
+            width: 54px;
+            border-radius: 50%;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        &-name {
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid;
+            color: $blue;
+            margin-bottom: 8px;
+            transition: $trans;
+        }
+    }
+
+    &__pagination {
+        @include fcsb;
+        margin-bottom: 40px;
+
+        &.center {
+            @include fcc;
+        }
+
+        .icon {
+            font-size: 12px;
+            fill: $text;
+        }
+
+        .btn:not(.btn-outline) {
+            &:hover .icon {
+                fill: #fff;
+            }
+
+            .icon {
+                margin-left: 8px;
+                transform: rotate(90deg);
+                margin-right: 0;
+            }
+        }
+
+        .left {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        .right {
+            .icon {
+                margin-right: 0;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    &__bottom {
+        background: #fff8e4;
+        @include fsn;
+        padding: 30px 39px;
+        margin-top: 24px;
+        margin-bottom: 30px;
+
+        &-item {
+            width: 50%;
+        }
+
+        .rating {
+            text-align: left;
+        }
+
+        .social {
+            .icon {
+                font-size: 24px !important;
+            }
+        }
+    }
+}
+
+.find {
+    border-top: 1px dashed $gray;
+    border-bottom: 1px dashed $gray;
+    padding: 21px 0;
+    color: $gray;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    .social.line {
+        span {
+            font-weight: 600;
+            font-size: 20px;
+            margin-right: 30px;
+            color: $text;
+            display: block;
+        }
+
+        a .icon {
+            font-size: 23px;
+        }
+    }
+}
+
+.author {
+    @include fcn;
+    margin-top: 23px;
+
+    span {
+        color: $gray;
+        font-weight: 600;
+        margin-right: 26px;
+    }
+
+    .article__user {
+        @include fcn;
+        margin-right: 22px;
+
+        &:hover {
+            .article__user-name {
+                color: $blue;
+            }
+        }
+
+        img {
+            width: 40px;
+        }
+
+        &-name {
+            color: $text;
+            font-size: 14px;
+        }
+    }
+
+    .checkbox {
+        span {
+            color: $text;
+            margin-left: 10px;
+        }
+    }
+}
+
+.border-block {
+    border: 3px solid #f6c035;
+    padding: 26px 34px;
+    margin-bottom: 30px;
+
+    .filter__link {
+        color: $blue;
+
+        &:hover {
+            color: $text;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.notice {
+    @include fsn;
+    display: inline-flex;
+    padding: 34px 40px;
+    background: #f6faff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+
+    &.green {
+        background: #f1fff6;
+
+        .icon {
+            fill: $green;
+        }
+
+        &.border {
+            border-left: 3px solid $green;
+        }
+    }
+
+    &.purple {
+        background: #f8f1ff;
+
+        .icon {
+            fill: $purple;
+        }
+
+        &.border {
+            border-left: 3px solid $purple;
+        }
+    }
+
+    .icon {
+        fill: $blue;
+        font-size: 30px;
+        margin-right: 18px;
+        flex-shrink: 0;
+        margin-top: 5px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        color: $gray;
+        line-height: 1.4;
+    }
+}
+
+.blockquote {
+    background: #fff8e4;
+    @include fsn;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 33px 37px;
+    margin-bottom: 30px;
+
+    &.line {
+        border-left: 3px solid $yellow;
+    }
+
+    .icon {
+        fill: $yellow;
+        font-size: 33px;
+        margin-right: 18px;
+        flex-shrink: 0;
+    }
+
+    .article__user {
+        margin-top: 19px;
+
+        &:hover .article__user-name {
+            color: $blue;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        &-name {
+            font-size: 14px;
+            color: $text;
+        }
+
+        &-work {
+            font-size: 14px;
+            color: #858a8d;
+        }
+    }
+}
+
+.comment {
+    margin-bottom: 40px;
+
+    &__top {
+        @include fcsb;
+        margin-bottom: 32px;
+
+        div {
+            cursor: pointer;
+            transition: $trans;
+
+            &:hover {
+                color: $blue;
+
+                .icon {
+                    fill: $blue;
+                }
+            }
+        }
+
+        .icon {
+            font-size: 20px;
+            transition: $trans;
+        }
+    }
+
+    &__sort {
+        @include r(767) {
+            font-size: 14px;
+        }
+
+        font-weight: 700;
+        font-size: 18px;
+
+        .icon {
+            margin-left: 5px;
+            font-size: 10px;
+            transform: rotate(90deg);
+        }
+    }
+
+    form {
+        @include r(767) {
+            @include fsn;
+        }
+
+        @include fcn;
+        margin-bottom: 22px;
+
+        img {
+            @include r(767) {
+                width: 30px;
+                margin-right: 11px;
+            }
+
+            width: 44px;
+            flex-shrink: 0;
+            margin-right: 26px;
+        }
+
+        .form-group {
+            width: 100%;
+            position: relative;
+            border: 1px solid $gray;
+        }
+
+        input {
+            @include r(767) {
+                font-size: 12px;
+            }
+
+            width: 100%;
+            padding: 13px 18px;
+            padding-right: 80px;
+            border: 0;
+        }
+    }
+
+    &__controls {
+        @include centerYa;
+        right: 14px;
+        @include fcn;
+
+        div {
+            padding: 0 4px;
+            cursor: pointer;
+            @include fcc;
+
+            &:hover .icon {
+                fill: $blue;
+            }
+        }
+
+        .icon {
+            font-size: 18px;
+            fill: $gray;
+            transition: $trans;
+        }
+    }
+
+    &__item {
+        @include r(767) {
+            padding-left: 0;
+        }
+
+        @include fsn;
+        padding-left: 70px;
+
+        form {
+            @include r(767) {
+                display: block;
+            }
+
+            @include fen;
+
+            input {
+                @include r(767) {
+                    padding-right: 12px;
+                }
+
+                padding-right: 18px;
+                border-bottom: 1px solid $gray;
+                padding-left: 0;
+            }
+
+            .btn {
+                @include r(767) {
+                    margin-left: 0;
+                    margin-top: 5px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                padding: 12px 26px;
+                margin-left: 30px;
+            }
+        }
+
+        img {
+            @include r(767) {
+                width: 30px;
+                margin-right: 11px;
+            }
+
+            width: 44px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        & > div {
+            width: 100%;
+
+            & > .comment__item {
+                @include r(767) {
+                    margin-left: -25px;
+                }
+
+                padding-left: 0;
+
+                img {
+                    width: 34px;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        @include r(767) {
+            font-size: 12px;
+        }
+
+        width: 100%;
+        padding: 18px;
+        background: #f6faff;
+        line-height: 1.35;
+        margin-bottom: 5px;
+    }
+
+    &__bottom {
+        @include fcn;
+        margin-bottom: 15px;
+    }
+
+    &__date {
+        font-size: 12px;
+        color: #828282;
+        margin-right: 10px;
+    }
+
+    &__answer {
+        color: $blue;
+        font-size: 12px;
+        transition: $trans;
+        cursor: pointer;
+
+        &:hover {
+            color: $text;
+        }
+    }
+}

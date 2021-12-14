@@ -1,0 +1,138 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>Каталог товаров</h2>
+
+            <div class="border-block product">
+                <img src="img/book2.png" alt="" class="product__img">
+                <div class="product__info">
+                    <div class="product__name">Дюна. Мессия дюны дети дюны. Автор <br> Фрэнк Герберт</div>
+                    <div class="product__code">Артикул: 23456</div>
+                    <img src="img/stars.svg" alt="" class="product__stars">
+                    <div class="item__bottom">
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                            </svg>
+                            268
+                        </div>
+                        <div class="item__bottom-item">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                            </svg>
+                            2688
+                        </div>
+                    </div>
+                    <div class="checkbox center">
+                        <label for="c1">В избранное</label>
+                        <input type="checkbox" id="c1">
+                    </div>
+                    <div class="product__controls">
+                        <div class="product__price">11 499 ₽ <span>1 499</span></div>
+                        <a href="javascript:void(0)" class="btn">Купить</a>
+                    </div>
+                    <div class="social line gray">
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <a href="javascript:void(0)" class="active" data-tab="features">Характеристика</a>
+                <a href="javascript:void(0)" data-tab="reviews">Отзывы</a>
+                <div class="bar"></div>
+            </div>
+
+
+            <div class="tab mb-130 active" data-tab="features">
+                <h3>Описание</h3>
+                <p>Roistat обеспечивает максимальную защиту ваших данных. Сервис расположен на множестве серверов в
+                    разных странах мира для большей надежности и обеспечения сохранности данных. Roistat обеспечивает
+                    максимальную защиту ваших данных. Сервис расположен на множестве серверов в разных странах мира для
+                    большей надежности и обеспечения сохранности данных. Roistat обеспечивает максимальную защиту ваших
+                </p>
+
+                <ul class="dot">
+                    <li>Нужно оптимизировать рекламу в Директе.</li>
+                    <li>Если можно добавить больше эффективного трафика в Google за счет низкоэффективного в Яндексе,
+                        нужно уже сейчас изменить структуру бюджета по площадкам.</li>
+                    <li>Если проблема с кампаниями в сетях, нужно поработать над публикациями отдельно по каждому
+                        элементу: картинке, тексту, призыву к действию.</li>
+                    <li>Если проблема с кампаниями в сетях, нужно поработать над публикациями отдельно </li>
+                </ul>
+            </div>
+            <div class="tab mb-130" data-tab="reviews"></div>
+
+            <h3>Отзывы</h3>
+            {% include "template/comment.html" %}
+        </div>
+        <div class="sidebar right">
+            {% include "template/sidebar/social.html" %}
+            {{ time.item('Нет времени читать?', '', 'Отправить PDF на почту')}}
+
+            {{ title.item('', 'Будет полезно:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+            </div>
+            {{ banner.item('banner2.png', 'Рекламный <br> баннер 2', 'type') }}
+            {{ banner.item('banner2.png', 'Рекламный <br> баннер 2', 'type') }}
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

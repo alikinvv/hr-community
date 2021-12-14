@@ -1,0 +1,145 @@
+.item {
+    position: relative;
+    padding: 8px;
+    border: 1px solid transparent;
+    transition: $trans;
+    display: block;
+
+    &:hover {
+        border-color: $yellow;
+        background: #f6faff;
+    }
+
+    &__category {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        background: $text;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 4px 8px;
+        font-weight: 600;
+    }
+
+    &__icon {
+        border-radius: 50%;
+        @include fcc;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        &.white {
+            &::before {
+                background: $red;
+            }
+
+            .icon {
+                fill: #fff;
+                font-size: 20px;
+            }
+        }
+
+        .icon {
+            font-size: 35px;
+            fill: $red;
+            z-index: 2;
+            position: relative;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        background: $yellow;
+        font-weight: 600;
+        padding: 5px 10px;
+        text-transform: uppercase;
+    }
+
+    &__body {
+        padding-top: 13px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 16px;
+        transition: $trans;
+    }
+
+    .tags {
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+        @include fcn;
+
+        &-item {
+            color: #b2b7bb;
+            font-weight: 500;
+            margin-right: 18px;
+            @include fcn;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .icon {
+                fill: #b2b7bb;
+                font-size: 11px;
+                margin-right: 8px;
+            }
+        }
+
+        & + .checkbox {
+            margin-top: 10px;
+        }
+    }
+
+    &__user {
+        @include fcn;
+        color: $gray;
+        margin-bottom: 16px;
+
+        img {
+            width: 36px;
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__online {
+        font-weight: 500;
+
+        &-icon {
+            font: cursive;
+            color: $gray;
+            margin-bottom: 8px;
+            @include fcn;
+
+            .icon {
+                fill: $yellow;
+                font-size: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+}

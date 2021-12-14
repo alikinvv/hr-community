@@ -1,0 +1,148 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <h2>Управление E-mail рассылками</h2>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
+                поисках работы открыто, не анонимно, то мы также отправим информацию </p>
+
+            <div class="tab active">
+                <div class="options__title">
+                    <span><strong>1. Блог</strong></span>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="options__body">
+                    <div class="options__title">
+                        <span><strong>1.1. Статьи</strong></span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__title">
+                        <span><strong>1.1. Статьи</strong></span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="options__title">
+                    <span><strong>2. Эксперты</strong></span>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="options__body">
+                    <div class="options__title">
+                        <span><strong>1.1. Статьи</strong></span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__title">
+                        <span><strong>1.1. Статьи</strong></span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="options__item">
+                        <span>1.1.1 Статья один</span>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

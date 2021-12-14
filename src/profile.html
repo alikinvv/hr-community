@@ -1,0 +1,203 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <h2>Редактирование профиля</h2>
+
+            <form action="" class="form">
+                <div class="form__flex">
+                    <div class="form-group input">
+                        <input type="text" value="Михаил">
+                    </div>
+                    <div class="form-group input">
+                        <input type="text" value="Подольский">
+                    </div>
+                </div>
+                <div class="form__flex">
+                    <div class="form-group input">
+                        <input type="text" value="Викторович">
+                    </div>
+                    <div class="form-group">
+                        <div class="flex">
+                            <span>Пол</span>
+
+                            <div class="form-group radio">
+                                <input type="radio" name="p1" checked id="p1">
+                                <label for="p1">Мужской</label>
+                            </div>
+                            <div class="form-group radio">
+                                <input type="radio" name="p1" id="p2">
+                                <label for="p2">Женский</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="avatar">
+                    <div class="avatar__name">Аватар</div>
+                    <div class="avatar__body">
+                        <img src="img/user2.png" alt="">
+                        <div>
+                            <div class="clip">
+                                <input type="file">
+                                <div class="clip__cover">
+                                    <svg class="icon yellow">
+                                        <use xlink:href="img/symbol-defs.svg#icon-clip"></use>
+                                    </svg>
+                                    <div>
+                                        <span>Загрузить резюме</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avatar__desc">Максимальный размер файла 10 МБ. Форматы: pdf, png, jpeg, tif
+                            </div>
+                            <div class="avatar__remove">Удалить аватар</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__flex">
+                    <div class="form-group input">
+                        <input type="text" value="HR специалист">
+                    </div>
+                    <div class="form-group input">
+                        <input type="text" value="ООО синергия">
+                    </div>
+                </div>
+
+                <div class="settings__list">
+                    <div class="settings__list-name">Контакты</div>
+                    <div>
+                        <span>
+                            Телефон
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                    <div>
+                        <span>
+                            Instagram
+                        </span>
+                        <a href="javascript:void(0)">Михаил</a>
+                        <a href="javascript:void(0)" class="settings__remove">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-close"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <span>
+                            Youtube
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                    <div>
+                        <span>
+                            Skype
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                    <div>
+                        <span>
+                            Linkedin
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                    <div>
+                        <span>
+                            Vk
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                    <div class="active">
+                        <span>
+                            Facebook
+
+                            <div class="settings__edit">
+                                <input type="text" value="http//....">
+                                <button class="btn">Сохранить</button>
+                            </div>
+                        </span>
+                        <a href="javascript:void(0)">Отменить</a>
+                    </div>
+                    <div>
+                        <span>
+                            Telegram
+                        </span>
+                        <a href="javascript:void(0)">Изменить</a>
+                    </div>
+                </div>
+
+                <div class="form-group with-label">
+                    <label for="">Информация о себе</label>
+                    <textarea placeholder="Введите описание"></textarea>
+                </div>
+
+                <div class="form__flex">
+                    <div class="form-group input">
+                        <input type="text" class="phone-input" placeholder="+7(___) ___-__-__"
+                            value="+7 (999) 999-99-99">
+                    </div>
+                    <div class="form-group input">
+                        <input type="text" value="tane@mail.ru">
+                    </div>
+                </div>
+
+                <div class="form__flex">
+                    <div class="form-group with-label">
+                        <label for="">Услуги</label>
+                        <div class="select">
+                            <div class="select__current">
+                                <span>Размер компании</span>
+                            </div>
+                            <div class="select__dropdown custom-scroll">
+                                <div class="select__item">1-10</div>
+                                <div class="select__item">10-50</div>
+                                <div class="select__item">50-100</div>
+                                <div class="select__item">100-500</div>
+                                <div class="select__item">500-1000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group with-label">
+                        <label for="" class="hide"></label>
+                        <button class="btn btn-big btn-outline btn-add">Добавить</button>
+                    </div>
+                </div>
+
+                <div class="form__tags">
+                    <div>
+                        SEO Оптимизация
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        Маркетинговая стратегия
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="form__controls">
+                    <button class="btn">Сохранить</button>
+                    <button class="btn btn-outline">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

@@ -1,0 +1,134 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/article.html" as article %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Статьи</span></a>
+            </div>
+
+            <div class="title-photo">
+                <img src="img/slack.png" alt="">
+                <div>
+                    <h2>Управленческое консультирование
+                        в две строчкиииии</h2>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>О компании:</h3>
+
+            <p>Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в покупку за 2 месяца
+                Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в покупку за 2 месяца
+            </p>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2>Эксперты от компании</h2>
+
+            <div class="grid two">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+            </div>
+
+            <h2>Новости компании</h2>
+
+            <div class="grid two">
+                {{ item.item('Новость', 'icon', '', 'fire', '', 'a1.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании', 'tags-3') }}
+                {{ item.item('статья', '', '', '', '', 'a2.png', '3 вида биржевых трафиков как их читать
+                и использовать при') }}
+                {{ item.item('интервью', 'icon', 'white', 'lightning', '', 'a3.png', '3 вида биржевых трафиков как их
+                читать и использовать при инвестирировании ', 'tags-3') }}
+                {{ item.item('кейс', '', '', '', '', 'a4.png', '3 вида биржевых трафиков как их читать и
+                использовать при') }}
+            </div>
+
+            <h2>Мероприятия компании</h2>
+
+            <div class="grid two">
+                {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего собственного
+                онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+            </div>
+
+            <h2>Видео компании</h2>
+
+            <div class="grid two">
+                {{ article.item('s1.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+                {{ article.item('s2.png', '3 вида биржевых трафиков как их читать и использовать при ')}}
+                {{ article.item('s3.png', 'Двуличный kpi как правильные показатели приводят к неправильным выводам')}}
+                {{ article.item('s4.png', '3 вида биржевых трафиков как их читать и использовать при
+                инвестирировании')}}
+            </div>
+
+            <div class="telegram" style="background-image: url(img/books.png);">
+                <div>
+                    <div class="telegram__title">Подписаться на материалы <br> и новости от компании</div>
+                </div>
+                <a href="javascript:void(0)" class="btn">Подписаться</a>
+            </div>
+        </div>
+        <div class="sidebar right">
+            {{ time.item('Хотите получать вакансии этой рубрики? ', 'Просто подпишитесь на уведомления!', 'Отправить
+            ссылку на почту', 'purple')}}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

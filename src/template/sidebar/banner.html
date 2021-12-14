@@ -1,0 +1,5 @@
+{% macro item(img, text, type) %}
+<a href="javascript:void(0)" class="sidebar__banner {{ type }}" style="background-image: url(../img/{{ img }}">
+    {{ text | safe }}
+</a>
+{% endmacro %}

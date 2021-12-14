@@ -1,0 +1,35 @@
+{% macro item(img, name) %}
+<a href="javascript:void(0)" class="expert__item">
+    <div class="expert__user">
+        <img src="img/{{img}}" alt="">
+        <div class="expert__name">{{name}}</div>
+    </div>
+    <div class="expert__text">Руководитель по информационной безопасности в компнии</div>
+    <div class="item__bottom">
+        <div class="item__bottom-item">
+            <svg class="icon">
+                <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+            </svg>
+            268
+        </div>
+        <div class="item__bottom-item">
+            <svg class="icon">
+                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+            </svg>
+            26
+        </div>
+        <div class="item__bottom-item">
+            <svg class="icon">
+                <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+            </svg>
+            1256
+        </div>
+
+        <div class="more">
+            <svg class="icon">
+                <use xlink:href="img/symbol-defs.svg#icon-arrow-right"></use>
+            </svg>
+        </div>
+    </div>
+</a>
+{% endmacro %}

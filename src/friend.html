@@ -1,0 +1,58 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <div class="section bg login">
+                <h2>Пригласить друга на портал</h2>
+
+                <p>Отпарвить письмо приглашение от вашего имени <br> зарегисрироваться или читать портал зарегисриро
+                    <br> или читать портал.
+                </p>
+
+                <p><strong>Введите данные человека, которого будете <br> приглашать:</strong></p>
+
+                <form action="">
+                    <div class="input">
+                        <input type="text" placeholder="Имя знакомого*">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="E-mail знакомого*">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Комментарий от вас:">
+                    </div>
+
+                    <div class="tip">В информационном письме будет указано, что вы <br>
+                        порекомендовали ему наш проект порекомендовали ему <br>
+                        наш интересный проект</div>
+
+                    <button class="btn">Отправить</button>
+                </form>
+            </div>
+
+            <div class="notice green border">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-smile"></use>
+                </svg>
+                <div>
+                    <div class="notice__title">Вам на почту направлены контакты для отклика на вакансию <br> вам на
+                        почту
+                        направлены контакты </div>
+                    <div class="notice__text">Если вы не получили письмо, проверьте папку СПАМ или напишите нам на почту
+                        <br>
+                        help@hrcommuniticlub.ru
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

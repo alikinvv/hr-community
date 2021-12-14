@@ -1,0 +1,69 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>Компании</h2>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме <a href="javascript:void(0)">Читать далее</a></p>
+
+            <div class="sort">
+                <div class="sort__title">Сортировать:</div>
+                <div class="sort__item">А - Я</div>
+                <div class="sort__item">
+                    По дате
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </div>
+
+                <div class="dictionary__search">
+                    <div class="input">
+                        <input type="text" placeholder="Поиск по компаниям">
+                        <button>
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="btn">Найти</button>
+                </div>
+            </div>
+
+            <div class="grid three">
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+                {% include "template/company.html" %}
+            </div>
+
+            {% include "template/pagination.html" %}
+
+            <div class="divider"></div>
+
+            {% include "template/text.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

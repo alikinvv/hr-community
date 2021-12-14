@@ -1,0 +1,28 @@
+{% macro item(class, icon, text, divider, title, placeholder, btn) %}
+<div class="subscribe {{ class }}">
+    {% if not icon == '' %}
+    <img src="img/icons/letter.svg" alt="">
+    {% endif %}
+
+    {% if class == 'blue' %}
+    <div class="subscribe__title">{{ title | safe }}</div>
+    {% endif %}
+
+    <div class="subscribe__text">{{ text | safe }}</div>
+
+    {% if not divider == '' %}
+    <div class="subscribe__divider"></div>
+    {% endif %}
+
+    {% if class == 'sidebar-border' %}
+    <div class="subscribe__title">{{ title | safe }}</div>
+    {% endif %}
+
+    <form action="" class="subscribe__form">
+        <div class="input">
+            <input type="text" placeholder="{{ placeholder }}">
+        </div>
+        <button class="btn">{{ btn }}</button>
+    </form>
+</div>
+{% endmacro %}

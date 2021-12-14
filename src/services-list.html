@@ -1,0 +1,96 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>HR IT</h2>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
+                поисках работы открыто, не анонимно, то мы также отправим информацию о вас <a
+                    href="javascript:void(0)">Читать далее</a></p>
+
+            <div class="grid two">
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+                {% include "template/solve.html" %}
+            </div>
+
+            {% include "template/pagination.html" %}
+
+            <div class="divider"></div>
+
+            {% include "template/text.html" %}
+        </div>
+        <div class="sidebar right">
+            {% include "template/sidebar/social.html" %}
+
+            <h2>Подобрать:</h2>
+            {% include "template/sidebar/filter.html" %}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            {{ title.item('', 'Эксперты:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+            </div>
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            {{ title.item('', 'HR IT проект', 'Все') }}
+            {% include "template/solve.html" %}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

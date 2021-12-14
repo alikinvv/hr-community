@@ -1,0 +1,76 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+        </div>
+        <div class="content__main">
+            <div class="border-block user">
+                <img src="img/user2.png" alt="" class="user__img">
+                <div class="user__info">
+                    <div class="user__name">Михаил Ворошилов</div>
+                    <div class="user__work">UX дизайнер в компании компании/ <br>
+                        Digital studio</div>
+                    <img src="img/stars.svg" alt="" class="user__stars">
+                </div>
+                <div class="user__contacts">
+                    <div class="social line gray">
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-youtube"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-inst"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <svg class="icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="user__phone"><span>Телефон:</span> <a href="tel:+79295475689">+7 (929) 547-56-89</a>
+                    </div>
+                    <a href="javascript:void(0)" class="btn">Перейти в карточку на сайте</a>
+                </div>
+            </div>
+
+            <div class="border-block">
+                <div class="sort left">
+                    <div class="sort__title">Сортировать:</div>
+                    <div class="sort__item active">По новизне</div>
+                    <div class="sort__item">Неотвеченные</div>
+                </div>
+
+                {% include "template/comment.html" %}
+                <div class="divider"></div>
+                {% include "template/comment.html" %}
+
+                <a href="javascript:void(0)" class="btn">Показать еще</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

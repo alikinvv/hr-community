@@ -1,0 +1,129 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <h2>Запрос на запись видео роликов</h2>
+
+            <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
+                подгрузить ваше резюме <a href="javascript:void(0)">Читать далее</a></p>
+
+            <div class="grid four">
+                <a href="javascript:void(0)" class="plan">
+                    <div class="plan__body">
+                        <div class="plan__title">Standart</div>
+                        <ul>
+                            <li>Живое участие на&nbsp;встрече</li>
+                            <li>Все бонусы от&nbsp;организаторов</li>
+                            <li>Вопросы эксперту</li>
+                            <li>Нетворкинг</li>
+                            <li>Кофе-брейк</li>
+                        </ul>
+                    </div>
+                    <div class="plan__price">5 000 руб.</div>
+                    <div class="btn btn-outline btn-gray">Оплатить</div>
+                    <div class="plan__desc">Как получить промокод на скидку 20%?
+                        <span>подробнее здесь</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="plan">
+                    <div class="plan__body">
+                        <div class="plan__title">Gold</div>
+                        <ul>
+                            <li>Живое участие на&nbsp;встрече</li>
+                            <li>Все бонусы от&nbsp;организаторов</li>
+                            <li>Вопросы эксперту</li>
+                            <li>Нетворкинг</li>
+                            <li>Кофе-брейк</li>
+                        </ul>
+                        <div class="plan__more">
+                            <div class="plan__more-title"><span>+ а ещё:</span></div>
+                            <ul>
+                                <li>Запись мероприятия с&nbsp;доступом на&nbsp;1&nbsp;устройство</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="plan__price">10 000 руб.</div>
+                    <div class="btn btn-outline btn-gray">Оплатить</div>
+                    <div class="plan__desc">Как получить промокод на скидку 20%?
+                        <span>подробнее здесь</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="plan">
+                    <div class="plan__body">
+                        <div class="plan__title"></div>
+                        <ul>
+                            <li>Живое участие на&nbsp;встрече</li>
+                            <li>Все бонусы от&nbsp;организаторов</li>
+                            <li>Вопросы эксперту</li>
+                            <li>Нетворкинг</li>
+                            <li>Кофе-брейк</li>
+                            <li>Запись мероприятия с&nbsp;доступом на&nbsp;1&nbsp;устройство</li>
+                        </ul>
+                        <div class="plan__more">
+                            <div class="plan__more-title"><span>+ а ещё:</span></div>
+                            <ul>
+                                <li>Индивидуальная консультация со&nbsp;спикером мероприятия (2&nbsp;часа в&nbsp;рамках
+                                    zoom-сессии)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="plan__price">25 000 руб.</div>
+                    <div class="btn btn-outline btn-gray">Оплатить</div>
+                    <div class="plan__desc">Как получить промокод на скидку 20%?
+                        <span>подробнее здесь</span>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="plan">
+                    <div class="plan__body">
+                        <div class="plan__title">Запись <br> мероприятия</div>
+                        <ul>
+                            <li>Запись мероприятия с&nbsp;доступом на&nbsp;1&nbsp;устройство (?)</li>
+                            <li>Все бонусы от&nbsp;организаторов</li>
+                        </ul>
+                    </div>
+                    <div class="plan__price">5 000 руб.</div>
+                    <div class="btn btn-outline btn-gray">Оплатить</div>
+                    <div class="plan__desc">Как получить промокод на скидку 20%?
+                        <span>подробнее здесь</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+
+            {% include "template/text.html" %}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

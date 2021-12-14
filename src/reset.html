@@ -1,0 +1,37 @@
+{% include "template/header.html" %}
+
+<section class="section login">
+    <div class="container">
+        <h2>Восстановление пароля</h2>
+        <p>Введите емейл и мы пришлем на него ссылку <br> для восстановления пароля</p>
+
+        <form action="">
+            <div class="input">
+                <input type="text" placeholder="Email или логин">
+            </div>
+
+            <button class="btn">Восстановить</button>
+        </form>
+
+        <h2>Придумайте новый пароль</h2>
+
+        <form action="">
+            <div class="input password">
+                <input type="password" placeholder="Пароль">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-eye-fill"></use>
+                </svg>
+            </div>
+            <div class="input password">
+                <input type="password" placeholder="Повторить пароль">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-eye-fill"></use>
+                </svg>
+            </div>
+
+            <button class="btn">Восстановить</button>
+        </form>
+    </div>
+</section>
+
+{% include "template/footer.html" %}

@@ -1,0 +1,9 @@
+{% macro item(title, text, btn, color) %}
+<div class="time {{ color }}">
+    <div class="time__title">{{ title }}</div>
+    {% if not text == '' %}
+    <div class="time__text">{{ text }}</div>
+    {% endif %}
+    <a href="javascript:void(0)" class="btn">{{ btn }}</a>
+</div>
+{% endmacro %}

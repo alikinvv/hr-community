@@ -1,0 +1,220 @@
+{% include "template/header.html" %}
+
+{% import "template/sidebar/banner.html" as banner %}
+{% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/sidebar/time.html" as time %}
+{% import "template/item.html" as item %}
+{% import "template/title.html" as title %}
+{% import "template/article.html" as article %}
+{% import "template/expert.html" as expert %}
+{% import "template/vacancy-item.html" as vacancy %}
+
+<section class="content">
+    <div class="container">
+        <div class="sidebar left">
+            {% include "template/sidebar/menu.html" %}
+            {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Акции</h2>
+            {% include "template/stock.html" %}
+            {% include "template/stock.html" %}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+        </div>
+        <div class="content__main">
+            <div class="breadcrumbs">
+                <a href="javascript:void(0)"><span>Главная</span></a>
+                <a href="javascript:void(0)"><span>Статьи</span></a>
+            </div>
+
+            <h2>Специалист по кадровому делопроизводству HR департамента</h2>
+
+            <div class="vacancy__info">
+                <div class="vacancy__features">
+                    <div>
+                        <svg class="icon ">
+                            <use xlink:href="img/symbol-defs.svg#icon-money"></use>
+                        </svg>
+                        <strong>40 000 - 55 000 ₽</strong>
+                    </div>
+                </div>
+                <div class="item__bottom">
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
+                        </svg>
+                        268
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
+                        </svg>
+                        26
+                    </div>
+                    <div class="item__bottom-item">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-message"></use>
+                        </svg>
+                        1256
+                    </div>
+                </div>
+            </div>
+
+            <div class="vacancy__company-info">
+                <div>
+                    <a href="javascript:void(0)" class="vacancy__company">
+                        <img src="img/fendi.png" alt="">
+                        <span>ООО Компания компания</span>
+                    </a>
+                    <div class="vacancy__desc">
+                        <span>Кадровые агенства</span>
+                        <span>10-50 сотрудников</span>
+                    </div>
+                </div>
+                <div class="vacancy__video">
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-play"></use>
+                    </svg>
+                    Видео обращение <br> от компании
+                </div>
+            </div>
+
+            <div class="addr">Москва <span class="dot"></span> Комсомольская, Новая Басманная, 22</div>
+            <div class="addr">Удаленная работа, 1-3 года, частична занятость</div>
+
+            <div class="vacancy__controls">
+                <a href="javascript:void(0)" class="btn">Откликнуться на вакансию</a>
+                <div class="checkbox center">
+                    <label for="t1">В избранное</label>
+                    <input type="checkbox" id="t1">
+                </div>
+
+                <div class="social line gray">
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-fb-square"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0)">
+                        <svg class="icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3>Обязанности:</h3>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <h3>Что нужно уметь:</h3>
+
+            <ul class="line">
+                <li>Мониторинг рекламной деятельности. </li>
+                <li>Анализ конъюнктуры рынка и её прогнозирование, Выработка ценовой, информационной (рекламной)
+                    политики</li>
+                <li>Выработка предложений по стратегии компании, сбор и анализ информации о конкурентах</li>
+                <li>Написание подробных отчётов, маркетинговых заключений, аналитических справок, а также технических
+                    заданий.</li>
+                <li>Администрирование сайта Компании</li>
+                <li>SEO оптимизация, поисковое продвижение сайта. </li>
+                <li>Организация директ-маркетинговых программ.</li>
+            </ul>
+
+            <h3>Адрес масте работы</h3>
+            <div class="addr">Москва <span class="dot"></span> Комсомольская, Новая Басманная, 22</div>
+            <a href="javascript:void(0)">Показать на карте</a>
+
+            <div class="vacancy__controls">
+                <a href="javascript:void(0)" class="btn">Откликнуться на вакансию</a>
+            </div>
+
+            <div class="blockquote line">
+                <svg class="icon">
+                    <use xlink:href="img/symbol-defs.svg#icon-star"></use>
+                </svg>
+                <div>
+                    Вам на почту направлены контакты для отклика на вакансию <br> вам на почту направлены контакты
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Похожие вакансии</h2>
+
+            <div class="grid two">
+                {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            </div>
+
+            <div class="divider"></div>
+
+            {% include "template/text.html" %}
+        </div>
+        <div class="sidebar right">
+            {{ time.item('Хотите сохранить вакансию? ', 'Отправьте ее себе на почту...', 'Отправить
+            ссылку на почту', 'sidebar-border')}}
+
+            {{ subscribe.item('blue', '', 'Отправьте им эту вакансию в <br> качестве рекомендации от <br> вашего
+            имени!', '', 'Хотите поделиться со <br> знакомыми?', 'Email кому отправляем', 'Отправить рекомендацию')}}
+
+            <h2>Фильтр:</h2>
+            {% include "template/sidebar/filter.html" %}
+
+            {{ title.item('', 'Мероприятия', 'Все') }}
+            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
+            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+
+            {{ title.item('', 'Эксперты:', 'Все') }}
+            <div class="sidebar-border">
+                {{ expert.item('user1.png', 'Александр Нежельский') }}
+                {{ expert.item('user2.png', 'Александр Нежельский') }}
+            </div>
+
+            {{ title.item('', 'Вакансии', 'Все') }}
+            {% include "template/vacancy.html" %}
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+
+            {{ title.item('', 'HR IT проект', 'Все') }}
+            {% include "template/solve.html" %}
+
+            <h2>Тесты</h2>
+            {% include "template/survey.html" %}
+
+            {{ subscribe.item('sidebar-border', 'icon', 'События в HR, которые читает <br> вся Россия', 'divider',
+            'Подпишись на нашу <br> рассылку, чтобы быть <br> первым в курсе всего', 'Email', 'Подписаться')}}
+        </div>
+    </div>
+</section>
+
+{% include "template/footer.html" %}
