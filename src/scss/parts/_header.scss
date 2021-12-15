@@ -268,11 +268,19 @@
 
 .menu {
     &__wrap {
+        @include r(1345) {
+            @include fcsb;
+        }
+
         margin-left: -14px;
         @include fcn;
 
         & > div,
         a {
+            @include r(1345) {
+                padding: 21px 14px;
+            }
+
             padding: 21px 15px;
             transition: $trans;
             display: inline-block;
@@ -359,6 +367,10 @@
         margin-right: 25px;
 
         a {
+            @include r(1345) {
+                margin-right: 2.3vw;
+            }
+
             @include fcn;
             transition: $trans;
             margin-right: 2.6vw;

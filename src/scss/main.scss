@@ -89,6 +89,10 @@
 }
 
 .slider {
+    @include r(1345) {
+        max-width: 665px;
+    }
+
     margin-bottom: 52px;
     max-width: 750px;
 
@@ -100,6 +104,10 @@
 
     &__nav {
         .swiper-slide {
+            @include r(1345) {
+                min-height: 100px;
+            }
+
             cursor: pointer;
             min-height: 81px;
 
@@ -206,6 +214,14 @@
 }
 
 .work {
+    @include r(1660) {
+        overflow: hidden;
+    }
+
+    @include r(1332) {
+        padding: 0 16px;
+    }
+
     background: #272a31;
     color: #fff;
     position: relative;
@@ -259,6 +275,14 @@
     }
 
     &__img {
+        @include r(1660) {
+            right: -15%;
+        }
+
+        @include r(1345) {
+            right: -17%;
+        }
+
         position: absolute;
         bottom: 0;
         right: 0;
@@ -682,6 +706,10 @@
     }
 
     &__item {
+        @include r(1345) {
+            padding: 9px 12px;
+        }
+
         background: #f0f3f8;
         padding: 11px 15px;
         @include fcc;
@@ -708,6 +736,7 @@
         margin-left: auto;
         font-weight: 600;
         color: $gray;
+        flex-shrink: 0;
     }
 
     .dictionary__search {
@@ -770,6 +799,14 @@
 }
 
 .login {
+    @include r(1660) {
+        background: url(../img/login.svg) no-repeat 150% top;
+    }
+
+    @include r(1345) {
+        background: url(../img/login.svg) no-repeat 190% top;
+    }
+
     background: url(../img/login.svg) no-repeat right top;
 
     &.bg {
@@ -1220,6 +1257,10 @@
         @include fcn;
 
         .btn {
+            @include r(1345) {
+                margin-right: 20px;
+            }
+
             padding: 10px 36px;
             margin-right: 73px;
         }
@@ -2436,6 +2477,10 @@
     color: #fff;
 
     .container {
+        @include r(1332) {
+            padding: 71px 16px;
+        }
+
         @include fssb;
         padding: 71px 0;
         border-top: 1px solid #696969;
@@ -2743,6 +2788,10 @@
     }
 
     &__text {
+        @include r(1345) {
+            width: 126px;
+        }
+
         @include ellipsis;
         font-size: 10px;
         white-space: nowrap;

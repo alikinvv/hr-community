@@ -674,6 +674,11 @@ p {
     flex-wrap: wrap;
 
     div {
+        @include r(1345) {
+            font-size: 12px;
+        }
+
+        margin-top: 5px;
         font-weight: 500;
         border: 1px solid $pink;
         color: $pink;

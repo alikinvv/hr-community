@@ -206,6 +206,10 @@
 }
 
 .border-block {
+    @include r(1345) {
+        padding: 18px 18px;
+    }
+
     border: 3px solid #f6c035;
     padding: 26px 34px;
     margin-bottom: 30px;
@@ -277,6 +281,12 @@
 }
 
 .blockquote {
+    @include r(1345) {
+        br {
+            display: none;
+        }
+    }
+
     background: #fff8e4;
     @include fsn;
     font-weight: 500;
