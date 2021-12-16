@@ -20,6 +20,7 @@
 
     <header class="header">
         <div class="container">
+            <div class="hamburger"><span></span></div>
             <a href="/" class="header__logo">
                 <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-logo"></use>
@@ -204,6 +205,15 @@
             <div class="breadcrumbs">
                 <a href="javascript:void(0)"><span>Главная</span></a>
                 <a href="javascript:void(0)"><span>Материалы и гайды</span></a>
+            </div>
+
+            <div class="triggers">
+                <div class="menu-trigger">
+                    Меню
+                    <svg class="icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+                    </svg>
+                </div>
             </div>
 
             <h2>Документы</h2>
@@ -569,6 +579,17 @@
         </div>
     </div>
 </footer>
+
+<div class="backdrop">
+    <div class="modal" data-modal="sale">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

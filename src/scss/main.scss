@@ -4,6 +4,7 @@
 @import 'parts/item';
 @import 'parts/vacancy';
 @import 'parts/article';
+@import 'parts/modals';
 
 .pages {
     padding: 60px 0;
@@ -18,55 +19,30 @@
     }
 }
 
-.content {
-    padding: 32px 0;
-
-    .container {
-        @include fssb;
-    }
-
-    .left + .content__main {
-        // max-width: 750px;
-    }
-
-    &__main {
-        width: 100%;
-
-        & > a:not([class]) {
-            color: $blue;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        .section {
-            padding: 40px 72px;
-            margin-bottom: 30px;
-        }
-    }
-
-    iframe {
-        margin-top: 35px;
-        margin-bottom: 45px;
-    }
-}
-
 .breadcrumbs {
     margin-bottom: 16px;
 
     a {
+        @include r(767) {
+            font-size: 12px;
+        }
+
         font-weight: 500;
         color: $gray;
         position: relative;
         line-height: 1.7;
 
         &::after {
+            @include r(767) {
+                width: 10px;
+                height: 10px;
+            }
+
             content: '';
             display: inline-block;
             width: 12px;
             height: 12px;
-            background: url(../img/icons/right.svg) no-repeat center;
+            background: url(../img/icons/right-gray.svg) no-repeat center;
             background-size: contain;
             margin-left: 8px;
             margin-right: 8px;
@@ -86,11 +62,40 @@
             transition: $trans;
         }
     }
+
+    & + .menu-trigger {
+        @include r(1279) {
+            padding: 0;
+
+            & + .filter-trigger {
+                margin-bottom: 10px;
+            }
+        }
+
+        @include r(1023) {
+            padding: 0;
+            margin-top: 15px;
+
+            & + .filter-trigger {
+                margin-top: -18px;
+
+                & + .breadcrumbs {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
 }
 
 .slider {
     @include r(1345) {
         max-width: 665px;
+    }
+
+    @include r(1279) {
+        max-width: initial;
+        width: 100%;
     }
 
     margin-bottom: 52px;
@@ -99,6 +104,10 @@
     &__main {
         .swiper-slide {
             @include fen;
+
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -106,6 +115,10 @@
         .swiper-slide {
             @include r(1345) {
                 min-height: 100px;
+            }
+
+            @include r(767) {
+                min-height: 81px;
             }
 
             cursor: pointer;
@@ -128,17 +141,41 @@
 }
 
 .title {
+    @include r(767) {
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 40px !important;
+    }
+
     @include fcn;
     margin-bottom: 30px !important;
 
     &.fcsb {
+        @include r(767) {
+            display: block;
+        }
+
         @include fcsb;
+    }
+
+    &.mobile-flex {
+        @include r(767) {
+            padding-bottom: 0;
+            @include fcn;
+
+            a {
+                position: static;
+                margin-top: 0;
+                transform: none;
+            }
+        }
     }
 
     .icon {
         font-size: 35px;
         fill: $blue;
         margin-right: 12px;
+        flex-shrink: 0;
 
         &.red {
             fill: $red;
@@ -150,8 +187,17 @@
     }
 
     a {
+        @include r(767) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+        }
+
         margin-left: auto;
         border-bottom: 1px solid;
+        flex-shrink: 0;
+        margin-top: 11px;
 
         &:hover {
             border-color: transparent;
@@ -160,10 +206,45 @@
 }
 
 .title-photo {
+    @include r(767) {
+        display: block;
+
+        & + .article__features {
+            flex-wrap: wrap;
+            display: flex;
+
+            .btn {
+                order: 4;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .checkbox {
+                order: 2;
+            }
+
+            .item__bottom {
+                order: 3;
+            }
+
+            .item__bottom-item:first-child {
+                position: static;
+                transform: none;
+            }
+        }
+    }
+
     @include fsn;
     margin-bottom: 45px;
 
     img {
+        @include r(767) {
+            margin-bottom: 10px;
+        }
+
         flex-shrink: 0;
         margin-right: 25px;
     }
@@ -181,12 +262,20 @@
 }
 
 .rubric {
+    @include r(1279) {
+        font-size: 14px;
+        min-height: 68px;
+        margin-bottom: 10px;
+    }
+
     background: #fff;
     @include fcn;
     padding: 16px 20px;
     font-size: 16px;
     font-weight: 600;
     transition: $trans;
+    margin-bottom: 20px;
+    min-height: 73px;
 
     &:hover {
         background: $blue;
@@ -210,6 +299,14 @@
         font-size: 32px;
         fill: $yellow;
         transition: $trans;
+        flex-shrink: 0;
+    }
+
+    .more {
+        @include r(1023) {
+            position: relative;
+            left: 10px;
+        }
     }
 }
 
@@ -228,6 +325,11 @@
     padding: 0;
 
     .container {
+        @include r(1023) {
+            padding: 40px 0;
+            display: block;
+        }
+
         @include fsn;
         position: relative;
         padding: 81px 0;
@@ -238,20 +340,34 @@
     }
 
     &__text {
+        @include r(1023) {
+            br {
+                display: none;
+            }
+        }
+
         font-size: 16px;
         margin-bottom: 28px;
         line-height: 1.4;
     }
 
     &__desc {
+        @include r(1023) {
+            br {
+                display: none;
+            }
+        }
+
         line-height: 1.4;
         border-left: 2px solid $yellow;
         padding-left: 19px;
     }
 
     form {
-        @include r(767) {
+        @include r(1023) {
             width: 100%;
+            margin-left: 0;
+            margin-top: 40px;
         }
 
         margin-left: 94px;
@@ -271,6 +387,18 @@
     }
 
     &__controls {
+        @include r(767) {
+            display: block;
+
+            .btn {
+                margin-top: 15px;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+        }
+
         @include fcsb;
     }
 
@@ -281,6 +409,10 @@
 
         @include r(1345) {
             right: -17%;
+        }
+
+        @include r(1279) {
+            display: none;
         }
 
         position: absolute;
@@ -382,6 +514,24 @@
     &__list {
         @include flexlist(6px);
         margin-bottom: -12px;
+
+        &:not(.line) {
+            @include r(1023) {
+                white-space: nowrap;
+                flex-wrap: nowrap;
+                overflow: scroll;
+
+                a {
+                    padding: 0 18px;
+                    height: 52px;
+                    width: 100%;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
     a {
@@ -407,6 +557,7 @@
             margin-right: 9px;
             transition: $trans;
             font-size: 19px;
+            flex-shrink: 0;
         }
     }
 }
@@ -457,12 +608,48 @@
 }
 
 .footer {
+    @include r(1023) {
+        padding: 48px 0;
+    }
+
     background: #272a31;
     padding: 48px 0 78px;
     color: #fff;
 
     .container {
+        @include r(1023) {
+            flex-wrap: wrap;
+        }
+
+        @include r(767) {
+            display: block;
+        }
+
         @include fssb;
+    }
+
+    &__col {
+        @include r(1023) {
+            width: 50%;
+
+            &:nth-child(2) {
+                order: 3;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            &:last-child {
+                order: 2;
+            }
+        }
+
+        @include r(767) {
+            width: 100%;
+
+            &:nth-child(2) {
+                margin-bottom: 30px;
+            }
+        }
     }
 
     .header__logo {
@@ -493,13 +680,40 @@
     }
 
     .btn {
+        @include r(1023) {
+            width: 100%;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         padding: 11px 83px;
     }
 
     &__menu {
+        @include r(374) {
+            display: block;
+        }
+
         @include fsn;
 
-        div {
+        & > div {
+            @include r(1279) {
+                padding-right: 25px;
+            }
+
+            @include r(1023) {
+                padding-right: 45px;
+            }
+
+            @include r(374) {
+                margin-bottom: 40px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
             padding-right: 60px;
 
             a {
@@ -537,11 +751,24 @@
 }
 
 .pagination {
+    @include r(767) {
+        @include fcsb;
+        flex-wrap: wrap;
+    }
+
     @include fcc;
     margin-top: 32px;
     margin-bottom: 40px;
 
     &__nums {
+        @include r(767) {
+            order: 3;
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
         @include fcc;
         margin: 0 44px;
 
@@ -570,6 +797,13 @@
 }
 
 .telegram {
+    @include r(767) {
+        display: block;
+        background: #272a31;
+        background-image: none !important;
+        text-align: center;
+    }
+
     color: #fff;
     padding: 30px 40px;
     background-color: #272a31;
@@ -585,10 +819,22 @@
     }
 
     &__text {
+        @include r(767) {
+            margin-bottom: 10px;
+        }
+
         margin-top: 10px;
     }
 
     .btn {
+        @include r(767) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+        }
+
         margin-left: 40px;
         color: $text;
         padding: 13px 26px;
@@ -624,7 +870,11 @@
         width: 905px;
         margin-bottom: 30px;
 
-        & > button {
+        & > .btn {
+            @include r(767) {
+                display: none;
+            }
+
             flex-shrink: 0;
             margin-left: 20px;
             padding: 10px 30px;
@@ -657,11 +907,19 @@
     }
 
     &__letter {
+        @include r(767) {
+            font-size: 30px;
+        }
+
         font-weight: 600;
         font-size: 38px;
     }
 
     &__item {
+        @include r(767) {
+            padding: 10px 0;
+        }
+
         padding: 13px 0;
         border-bottom: 1px solid $gray;
 
@@ -672,10 +930,20 @@
 }
 
 .alphabet {
+    @include r(767) {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
     @include fcn;
     margin-bottom: 10px;
 
     div {
+        @include r(767) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
         color: $blue;
         font-weight: 600;
         font-size: 16px;
@@ -683,6 +951,14 @@
     }
 
     a {
+        @include r(1023) {
+            font-size: 14px;
+        }
+
+        @include r(767) {
+            margin-bottom: 3px;
+        }
+
         font-weight: 600;
         font-size: 16px;
         margin: 0 4px;
@@ -696,11 +972,20 @@
 }
 
 .sort {
+    @include r(767) {
+        flex-wrap: wrap;
+    }
+
     @include fcn;
     margin-top: 34px;
     margin-bottom: 34px;
 
     &__title {
+        @include r(767) {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
         font-size: 16px;
         margin-right: 20px;
     }
@@ -708,6 +993,10 @@
     &__item {
         @include r(1345) {
             padding: 9px 12px;
+        }
+
+        @include r(767) {
+            margin-top: 10px;
         }
 
         background: #f0f3f8;
@@ -733,6 +1022,10 @@
     }
 
     span {
+        @include r(767) {
+            margin-top: 10px;
+        }
+
         margin-left: auto;
         font-weight: 600;
         color: $gray;
@@ -740,6 +1033,11 @@
     }
 
     .dictionary__search {
+        @include r(767) {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+
         width: 100%;
         margin-left: 55px;
         margin-bottom: 0;
@@ -807,13 +1105,43 @@
         background: url(../img/login.svg) no-repeat 190% top;
     }
 
+    @include r(1279) {
+        background: url(../img/login.svg) no-repeat 600px top;
+    }
+
+    @include r(1023) {
+        background: transparent;
+    }
+
+    @include r(767) {
+        p {
+            br {
+                display: none;
+            }
+        }
+    }
+
     background: url(../img/login.svg) no-repeat right top;
 
     &.bg {
+        @include r(1279) {
+            background: #f0f3f8;
+            padding: 20px 30px;
+        }
+
+        @include r(767) {
+            background: transparent;
+            padding: 0;
+        }
+
         background: url(../img/friend.svg) no-repeat right bottom#F0F3F8;
     }
 
     form {
+        @include r(767) {
+            margin-top: 20px;
+        }
+
         @include r(490) {
             width: 100%;
         }
@@ -866,6 +1194,12 @@
         margin-bottom: 52px;
 
         a {
+            @include r(767) {
+                border: 0;
+                text-decoration: underline;
+                margin-top: 20px;
+            }
+
             color: $blue;
             border-bottom: 1px solid;
             margin-top: 34px;
@@ -880,13 +1214,23 @@
     }
 
     .tip {
+        @include r(767) {
+            white-space: normal;
+
+            br {
+                display: none;
+            }
+        }
+
         color: $gray;
         white-space: nowrap;
     }
-}
 
-.login {
     &__flex {
+        @include r(767) {
+            display: block;
+        }
+
         @include fssb;
         position: relative;
         margin-bottom: 22px;
@@ -896,10 +1240,23 @@
         }
 
         .btn {
+            @include r(767) {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+
             flex-shrink: 0;
             margin-left: 23px;
 
             &.width {
+                @include r(767) {
+                    width: 100%;
+                }
+
                 width: 213px;
                 padding-left: 0;
                 padding-right: 0;
@@ -933,6 +1290,11 @@
 }
 
 .link {
+    @include r(767) {
+        background-image: none;
+        padding: 15px;
+    }
+
     background: url(../img/star.svg) no-repeat right center #fff7e1;
     padding: 20px 38px;
     border-left: 3px solid $yellow;
@@ -943,6 +1305,10 @@
     }
 
     &.purple {
+        @include r(767) {
+            background-image: none;
+        }
+
         background: url(../img/star2.svg) no-repeat right center #f7faff;
         border-left: 3px solid $purple;
     }
@@ -960,6 +1326,10 @@
     }
 
     &__bottom {
+        @include r(767) {
+            display: block;
+        }
+
         @include fesb;
     }
 
@@ -968,6 +1338,15 @@
     }
 
     .btn {
+        @include r(767) {
+            margin-left: 0;
+            margin-top: 15px;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+
         margin-left: 20px;
     }
 }
@@ -1066,9 +1445,21 @@
 }
 
 .email {
+    @include r(767) {
+        flex-wrap: wrap;
+        @include fcsb;
+        margin-top: -10px;
+    }
+
     @include fcn;
 
     a {
+        @include r(767) {
+            width: 48%;
+            margin-top: 10px;
+            margin-right: 0;
+        }
+
         @include fcc;
         padding: 0 19px;
         margin-right: 12px;
@@ -1214,9 +1605,20 @@
 }
 
 .product {
+    @include r(767) {
+        flex-direction: column;
+        @include fcs;
+        position: relative;
+        text-align: center;
+    }
+
     @include fsn;
 
     &__img {
+        @include r(767) {
+            margin-bottom: 10px;
+        }
+
         width: 134px;
         flex-shrink: 0;
         margin-right: 24px;
@@ -1227,6 +1629,12 @@
         flex-wrap: wrap;
 
         .checkbox {
+            @include r(767) {
+                order: 4;
+                width: auto;
+                margin: 0 0 15px;
+            }
+
             width: 100%;
             margin-top: 15px;
             margin-bottom: 20px;
@@ -1234,6 +1642,14 @@
     }
 
     &__name {
+        @include r(767) {
+            order: 1;
+
+            br {
+                display: none;
+            }
+        }
+
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 13px;
@@ -1242,6 +1658,14 @@
     }
 
     &__code {
+        @include r(767) {
+            margin-bottom: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            order: 2;
+        }
+
         color: $gray;
         background: #f6faff;
         font-weight: 500;
@@ -1249,11 +1673,31 @@
         margin-right: 33px;
     }
 
+    .item__bottom {
+        @include r(767) {
+            order: 5;
+            @include fcc;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
     &__stars {
+        @include r(767) {
+            order: 3;
+            margin-bottom: 15px;
+        }
+
         margin-right: 30px;
     }
 
     &__controls {
+        @include r(767) {
+            display: block;
+            width: 100%;
+            order: 6;
+        }
+
         @include fcn;
 
         .btn {
@@ -1261,12 +1705,33 @@
                 margin-right: 20px;
             }
 
+            @include r(767) {
+                width: 100%;
+                text-align: center;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+
             padding: 10px 36px;
             margin-right: 73px;
         }
     }
 
+    .social {
+        @include r(767) {
+            width: 100%;
+            @include fcc;
+            order: 5;
+            margin-bottom: 15px;
+        }
+    }
+
     &__price {
+        @include r(767) {
+            margin-bottom: 10px;
+        }
+
         font-weight: 600;
         font-size: 20px;
         margin-right: 34px;
@@ -1283,21 +1748,41 @@
 }
 
 .user {
+    @include r(767) {
+        @include fcc;
+        flex-direction: column;
+        text-align: center;
+    }
+
     @include fsn;
 
     &__img {
+        @include r(767) {
+            margin-right: 0;
+            margin-bottom: 10px;
+            width: 50px;
+        }
+
         width: 120px;
         border-radius: 50%;
         margin-right: 27px;
     }
 
     &__name {
+        @include r(767) {
+            font-size: 18px;
+        }
+
         font-weight: 600;
         font-size: 24px;
         margin-bottom: 10px;
     }
 
     &__work {
+        @include r(767) {
+            font-size: 14px;
+        }
+
         color: $gray;
         font-weight: 600;
         font-size: 16px;
@@ -1306,6 +1791,12 @@
     }
 
     &__contacts {
+        @include r(767) {
+            text-align: center;
+            margin-left: 0;
+            margin-top: 15px;
+        }
+
         margin-left: auto;
         text-align: right;
 
@@ -1314,6 +1805,10 @@
         }
 
         .social {
+            @include r(767) {
+                @include fcc;
+            }
+
             @include fce;
 
             a:last-child {
@@ -1336,6 +1831,12 @@
         font-size: 16px;
         margin-top: 18px;
         margin-bottom: 18px;
+    }
+
+    .btn {
+        @include r(1023) {
+            white-space: nowrap;
+        }
     }
 }
 
@@ -1466,6 +1967,15 @@
 }
 
 .form {
+    @include r(1023) {
+        padding: 43px 28px;
+    }
+
+    @include r(767) {
+        padding: 0;
+        border: 0;
+    }
+
     border: 1px solid $gray;
     padding: 62px 54px;
     overflow: hidden;
@@ -2051,12 +2561,13 @@
             padding-right: 0;
         }
     }
+
     .btn-add {
         @include r(767) {
             height: auto;
         }
 
-        height: 60px;
+        height: 54px;
         padding: 12px 34px;
     }
 
@@ -2417,6 +2928,10 @@
 }
 
 .doc {
+    @include r(767) {
+        padding: 16px 15px;
+    }
+
     @include fsn;
     background: #f6faff;
     border: 1px dashed $gray;
@@ -2440,6 +2955,11 @@
     }
 
     &__icon {
+        @include r(767) {
+            width: 40px;
+            height: 40px;
+        }
+
         width: 60px;
         transition: $trans;
         height: 60px;
@@ -2450,6 +2970,10 @@
         @include fcc;
 
         .icon {
+            @include r(767) {
+                font-size: 22px;
+            }
+
             font-size: 32px;
             transition: $trans;
         }
@@ -3364,6 +3888,58 @@
         img {
             @include centerYa;
             right: 13px;
+        }
+    }
+}
+
+.triggers {
+    @include fcsb;
+
+    & > div {
+        margin-bottom: 15px;
+    }
+}
+
+.menu-trigger {
+    @include r(1023) {
+        display: inline-flex;
+    }
+
+    @include fcn;
+    color: $blue;
+    display: none;
+
+    .icon {
+        fill: $blue;
+        transform: rotate(90deg);
+        margin-left: 8px;
+        font-size: 12px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+.filter-trigger {
+    @include r(1279) {
+        display: flex;
+    }
+
+    @include fce;
+    display: none;
+    font-weight: 600;
+    margin-left: auto;
+
+    .icon {
+        fill: $yellow;
+        margin-left: 8px;
+        font-size: 14px;
+        position: relative;
+        top: 2px;
+    }
+
+    & + .breadcrumbs {
+        @include r(1279) {
+            margin-top: -21px;
         }
     }
 }

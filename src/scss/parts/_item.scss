@@ -1,9 +1,16 @@
 .item {
+    @include r(767) {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+        width: calc(100% + 16px) !important;
+    }
+
     position: relative;
     padding: 8px;
     border: 1px solid transparent;
     transition: $trans;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
         border-color: $yellow;
@@ -62,6 +69,10 @@
         }
     }
 
+    &__img {
+        width: 100%;
+    }
+
     &__price {
         position: absolute;
         top: 18px;
@@ -80,7 +91,7 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 1.4;
-        margin-bottom: 16px;
+        margin-bottom: 11px;
         transition: $trans;
     }
 

@@ -64,6 +64,10 @@
         }
 
         &-info {
+            @include r(767) {
+                display: block;
+            }
+
             @include fssb;
             margin-bottom: 23px;
         }
@@ -79,6 +83,11 @@
         margin-bottom: 15px;
 
         & > div {
+            @include r(1279) {
+                width: auto;
+                margin-right: 15px;
+            }
+
             width: 50%;
             @include fcn;
 
@@ -102,10 +111,18 @@
     }
 
     &__info {
+        @include r(767) {
+            display: block;
+        }
+
         @include fcsb;
         margin-bottom: 20px;
 
         .vacancy__features {
+            @include r(767) {
+                margin-bottom: 15px;
+            }
+
             width: 100%;
             margin-bottom: 0;
 
@@ -121,6 +138,10 @@
     }
 
     &__video {
+        @include r(767) {
+            margin-top: 15px;
+        }
+
         background: #f6faff;
         border: 1px dashed $yellow;
         padding: 12px 13px;
@@ -162,16 +183,38 @@
     }
 
     &__controls {
+        @include r(767) {
+            flex-wrap: wrap;
+        }
+
         @include fcn;
         margin-top: 26px;
         margin-bottom: 34px;
 
         .btn {
+            @include r(767) {
+                order: 3;
+                margin-top: 15px;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+                margin-right: 0;
+            }
+
             margin-right: 24px;
             padding: 13px 45px;
         }
 
         .social {
+            @include r(767) {
+                @include fce;
+
+                a:last-child {
+                    margin-right: 0;
+                }
+            }
+
             margin-left: auto;
         }
     }

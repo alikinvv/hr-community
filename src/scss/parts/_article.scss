@@ -1,4 +1,10 @@
 .article {
+    @include r(767) {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+        width: calc(100% + 16px) !important;
+    }
+
     padding: 8px;
     border: 1px solid transparent;
     transition: $trans;
@@ -10,14 +16,26 @@
     }
 
     &__header {
+        @include r(767) {
+            display: block;
+        }
+
         @include fesb;
         margin-bottom: 19px;
 
         h2 {
+            @include r(767) {
+                margin-bottom: 10px;
+            }
+
             margin-bottom: 0;
         }
 
         span {
+            @include r(767) {
+                font-size: 14px;
+            }
+
             font-weight: 600;
             font-size: 16px;
             color: $gray;
@@ -25,6 +43,10 @@
     }
 
     &__img {
+        @include r(767) {
+            margin-bottom: 20px;
+        }
+
         margin-bottom: 38px;
         width: 100%;
     }
@@ -42,6 +64,31 @@
     }
 
     &__features {
+        @include r(767) {
+            display: block;
+
+            & > div {
+                margin-top: 10px;
+            }
+
+            .checkbox {
+                @include fce;
+            }
+
+            .item__bottom {
+                position: relative;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                &-item:first-child {
+                    position: absolute;
+                    top: -21px;
+                    left: 0;
+                    transform: translateY(-100%);
+                }
+            }
+        }
+
         @include fcsb;
 
         & + .divider {
@@ -50,12 +97,27 @@
     }
 
     &__top {
+        @include r(767) {
+            flex-wrap: wrap;
+        }
+
         @include fcsb;
         margin-top: 33px;
         margin-bottom: 33px;
+
+        .rating {
+            @include r(767) {
+                text-align: left;
+            }
+        }
     }
 
     &__user {
+        @include r(767) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
         @include fsn;
 
         &:hover {
@@ -82,6 +144,10 @@
     }
 
     &__pagination {
+        @include r(767) {
+            flex-wrap: wrap;
+        }
+
         @include fcsb;
         margin-bottom: 40px;
 
@@ -95,6 +161,12 @@
         }
 
         .btn:not(.btn-outline) {
+            @include r(767) {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+            }
+
             &:hover .icon {
                 fill: #fff;
             }
@@ -107,20 +179,52 @@
         }
 
         .left {
+            @include r(767) {
+                order: 1;
+                width: 48%;
+            }
+
             .icon {
                 transform: rotate(180deg);
+            }
+
+            span {
+                @include r(767) {
+                    display: none;
+                }
+
+                margin-left: 5px;
             }
         }
 
         .right {
+            @include r(767) {
+                order: 2;
+                width: 48%;
+            }
+
             .icon {
                 margin-right: 0;
                 margin-left: 8px;
+            }
+
+            span {
+                @include r(767) {
+                    display: none;
+                }
+
+                margin-left: 5px;
             }
         }
     }
 
     &__bottom {
+        @include r(767) {
+            @include fcc;
+            flex-direction: column;
+            text-align: center;
+        }
+
         background: #fff8e4;
         @include fsn;
         padding: 30px 39px;
@@ -128,14 +232,31 @@
         margin-bottom: 30px;
 
         &-item {
+            @include r(767) {
+                width: 100%;
+            }
+
             width: 50%;
         }
 
         .rating {
+            @include r(767) {
+                text-align: center;
+                margin-top: -10px;
+
+                img {
+                    margin: 0 auto 10px;
+                }
+            }
+
             text-align: left;
         }
 
         .social {
+            @include r(767) {
+                @include fcc;
+            }
+
             .icon {
                 font-size: 24px !important;
             }
@@ -144,6 +265,10 @@
 }
 
 .find {
+    @include r(1279) {
+        display: none;
+    }
+
     border-top: 1px dashed $gray;
     border-bottom: 1px dashed $gray;
     padding: 21px 0;
@@ -151,6 +276,10 @@
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 40px;
+
+    & + .checkbox {
+        display: block;
+    }
 
     .social.line {
         span {
@@ -168,10 +297,19 @@
 }
 
 .author {
+    @include r(767) {
+        display: block;
+    }
+
     @include fcn;
     margin-top: 23px;
 
-    span {
+    & > span {
+        @include r(767) {
+            margin-bottom: 10px;
+            display: block;
+        }
+
         color: $gray;
         font-weight: 600;
         margin-right: 26px;
@@ -225,9 +363,23 @@
             margin-bottom: 0;
         }
     }
+
+    & > .sort {
+        @include r(767) {
+            margin-top: 0;
+        }
+    }
 }
 
 .notice {
+    @include r(1279) {
+        padding: 20px 25px;
+    }
+
+    @include r(767) {
+        display: block;
+    }
+
     @include fsn;
     display: inline-flex;
     padding: 34px 40px;
@@ -269,12 +421,30 @@
     }
 
     &__title {
+        @include r(767) {
+            font-size: 14px;
+
+            br {
+                display: none;
+            }
+        }
+
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 12px;
     }
 
     &__text {
+        @include r(1279) {
+            br {
+                display: none;
+            }
+        }
+
+        @include r(767) {
+            font-size: 14px;
+        }
+
         color: $gray;
         line-height: 1.4;
     }
@@ -285,6 +455,14 @@
         br {
             display: none;
         }
+    }
+
+    @include r(1279) {
+        padding: 20px 25px;
+    }
+
+    @include r(767) {
+        display: block;
     }
 
     background: #fff8e4;
@@ -456,6 +634,7 @@
 
             .btn {
                 @include r(767) {
+                    padding: 8px 26px;
                     margin-left: 0;
                     margin-top: 5px;
                     padding-left: 0;

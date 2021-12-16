@@ -32,6 +32,8 @@
                 <a href="javascript:void(0)"><span>Статьи</span></a>
             </div>
 
+            {% include "template/triggers.html" %}
+
             <div class="title-photo">
                 <img src="img/slack.png" alt="">
                 <div>
@@ -263,7 +265,7 @@
             {{ title.item('', 'Вакансии', 'Все') }}
             {% include "template/vacancy.html" %}
             {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
-            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
 
             <h2>Тесты</h2>
             {% include "template/survey.html" %}

@@ -1,11 +1,11 @@
-{% macro item(icon, title, link, color) %}
-<div class="title">
+{% macro item(icon, title, link, color, class) %}
+<div class="title {{ class }}">
     {% if not icon == '' %}
     <svg class="icon {{ color }}">
         <use xlink:href="img/symbol-defs.svg#icon-{{ icon}}"></use>
     </svg>
     {% endif %}
-    <h2>{{ title }}</h2>
+    <h2>{{ title | safe }}</h2>
     <a href="javascript:void(0)">{{ link }}</a>
 </div>
 {% endmacro %}

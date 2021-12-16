@@ -9,6 +9,15 @@
 {% import "template/rubric.html" as rubric %}
 {% import "template/vacancy-item.html" as vacancy %}
 
+<div class="triggers">
+    <div class="menu-trigger">
+        Меню
+        <svg class="icon">
+            <use xlink:href="img/symbol-defs.svg#icon-right"></use>
+        </svg>
+    </div>
+</div>
+
 <section class="content">
     <div class="container">
         <div class="sidebar left">
@@ -71,13 +80,22 @@
     <div class="container">
         {{ title.item('calendar', 'Мероприятия и конференции', 'Все события') }}
 
-        <div class="grid three">
-            {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего собственного
-            онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
-            {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего собственного
-            онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
-            {{ item.item('конференция', 'price', '', '', '120 000 ₽ ', 'a7.png', 'Тренинг “Запуск своего собственного
-            онлайн-проекта', 'tags-3', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+        <div class="grid three swiper-item">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{ item.item('конференция', 'price', '', '', '25 000 ₽', 'a5.png', 'Тренинг “Запуск своего
+                    собственного
+                    онлайн-проекта', 'tags-2', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}
+                </div>
+                <div class="swiper-slide">
+                    {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего
+                    собственного
+                    онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+                </div>
+                <div class="swiper-slide">{{ item.item('конференция', 'price', '', '', '120 000 ₽ ', 'a7.png', 'Тренинг
+                    “Запуск своего собственного
+                    онлайн-проекта', 'tags-3', 'online', 'user1.png', 'Ассоциация <br> HR-специалистов Москвы')}}</div>
+            </div>
         </div>
     </div>
 </section>
@@ -98,12 +116,22 @@
             </div>
         </div>
         <div class="sidebar right">
-            {{ title.item('user', 'Эксперты:', 'Все') }}
-            <div class="sidebar-border">
-                {{ expert.item('user1.png', 'Александр Нежельский') }}
-                {{ expert.item('user2.png', 'Александр Нежельский') }}
-                {{ expert.item('user3.png', 'Александр Нежельский') }}
-                {{ expert.item('user4.png', 'Александр Нежельский') }}
+            {{ title.item('user', 'Эксперты:', 'Все', '', 'mobile-flex') }}
+            <div class="sidebar-border sidebar-experts swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{ expert.item('user1.png', 'Александр Нежельский') }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{ expert.item('user2.png', 'Александр Нежельский') }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{ expert.item('user3.png', 'Александр Нежельский') }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{ expert.item('user4.png', 'Александр Нежельский') }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -113,53 +141,72 @@
     <div class="container">
         {{ title.item('blank', 'Рубрики нашей академии', 'Все рубрики') }}
 
-        <div class="grid three">
-            {{ rubric.item('Лидерство') }}
-            {{ rubric.item('Маркетинг') }}
-            {{ rubric.item('Творческий потенциал в компании') }}
-            {{ rubric.item('Благополучие компании') }}
-            {{ rubric.item('Менеджмент') }}
-            {{ rubric.item('Творческий потенциал в компании') }}
-            {{ rubric.item('HR бренд') }}
-            {{ rubric.item('Карьера') }}
-            {{ rubric.item('Творческий потенциал в компании') }}
-            {{ rubric.item('HR') }}
-            {{ rubric.item('Маркетинг') }}
-            {{ rubric.item('Пульс опросы') }}
+        <div class="grid three swiper-rubric">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{ rubric.item('Лидерство') }}
+                    {{ rubric.item('Маркетинг') }}
+                    {{ rubric.item('Творческий потенциал в компании') }}
+                    {{ rubric.item('Благополучие компании') }}
+                </div>
+                <div class="swiper-slide">
+                    {{ rubric.item('Менеджмент') }}
+                    {{ rubric.item('Творческий потенциал в компании') }}
+                    {{ rubric.item('HR бренд') }}
+                    {{ rubric.item('Карьера') }}
+                </div>
+
+                <div class="swiper-slide">
+                    {{ rubric.item('Творческий потенциал в компании') }}
+                    {{ rubric.item('HR') }}
+                    {{ rubric.item('Маркетинг') }}
+                    {{ rubric.item('Пульс опросы') }}
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="content section">
+<section class="section content">
     <div class="container">
         <div class="content__main">
             {{ title.item('case', 'Вакансии и стажировки', 'Все вакансии') }}
-            <div class="grid three">
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
-                {% include "template/vacancy.html" %}
+            <div class="grid three swiper-vacancy">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                    <div class="swiper-slide">{% include "template/vacancy.html" %}</div>
+                </div>
             </div>
         </div>
         <div class="sidebar right">
             {{ title.item('fire', 'Что новенького?', '', 'red') }}
-            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
-            {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
+            <div class="sidebar-vacancy">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 {% include "template/work.html" %}
 
-<section class="content">
+<section class="section content">
     <div class="container">
         <div class="sidebar left">
             {{ title.item('sale', 'Акции', '', 'red') }}
@@ -177,10 +224,22 @@
         </div>
         <div class="sidebar right">
             {{ title.item('puzzle', 'Тесты', '') }}
-            {% include "template/survey.html" %}
-            {% include "template/survey.html" %}
-            {% include "template/survey.html" %}
-            {% include "template/survey.html" %}
+            <div class="sidebar-tests">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -189,28 +248,32 @@
     <div class="container">
         {{ title.item('book', 'Магазин книг', 'Все книги') }}
 
-        <div class="grid six">
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
+        <div class="grid six swiper-books">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
-        {{ title.item('book', 'Полезные материалы, руководства и гайды', 'Все материалы') }}
+        {{ title.item('book', 'Полезные материалы, руководства и&nbsp;гайды', 'Все материалы') }}
 
-        <div class="grid six">
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
-            {% include "template/book.html" %}
+        <div class="grid six swiper-books">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+                <div class="swiper-slide">{% include "template/book.html" %}</div>
+            </div>
         </div>
     </div>
 </section>

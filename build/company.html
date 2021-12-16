@@ -20,6 +20,7 @@
 
     <header class="header">
         <div class="container">
+            <div class="hamburger"><span></span></div>
             <a href="/" class="header__logo">
                 <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-logo"></use>
@@ -758,7 +759,7 @@
 
 
             
-<div class="title">
+<div class="title ">
     
     <h2>Мероприятия</h2>
     <a href="javascript:void(0)">Все</a>
@@ -814,7 +815,7 @@
 
 
             
-<div class="title">
+<div class="title ">
     
     <h2>Вакансии</h2>
     <a href="javascript:void(0)">Все</a>
@@ -830,7 +831,10 @@
         </svg>
     </div>
 </a>
-            
+            <div class="sidebar-vacancy">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        
 <a href="javascript:void(0)" class="vacancyItem sidebar-border">
     <div class="vacancy__title">HR менеджер (стажер) в компанию аналитики и финансов </div>
     <div class="vacancy__category">Внутренние коммуникации</div>
@@ -863,9 +867,11 @@
     </div>
 </a>
 
-            
+                    </div>
+                    <div class="swiper-slide">
+                        
 <a href="javascript:void(0)" class="vacancyItem sidebar-border">
-    <div class="vacancy__title">HR менеджер (стажер) в компанию аналитики и финансов </div>
+    <div class="vacancy__title">HR менеджер (стажер) в компанию </div>
     <div class="vacancy__category">Внутренние коммуникации</div>
     <div class="vacancy__company">
         <img src="img/fendi.png" alt="">
@@ -896,9 +902,15 @@
     </div>
 </a>
 
+                    </div>
+                </div>
+            </div>
 
             <h2>Тесты</h2>
-            <a href="javascript:void(0)" class="survey sidebar-border">
+            <div class="sidebar-tests">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)" class="survey sidebar-border">
     <div class="survey__top">
         <img src="img/test.png" alt="">
         <div class="survey__title">Тест по оказанию первой медицинской помощи
@@ -924,7 +936,9 @@
         </div>
     </div>
 </a>
-            <a href="javascript:void(0)" class="survey sidebar-border">
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)" class="survey sidebar-border">
     <div class="survey__top">
         <img src="img/test.png" alt="">
         <div class="survey__title">Тест по оказанию первой медицинской помощи
@@ -950,6 +964,9 @@
         </div>
     </div>
 </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1036,6 +1053,17 @@
         </div>
     </div>
 </footer>
+
+<div class="backdrop">
+    <div class="modal" data-modal="sale">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

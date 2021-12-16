@@ -2,11 +2,25 @@
     flex-shrink: 0;
 
     &.left {
+        @include r(1023) {
+            width: 100%;
+            margin-right: 0;
+        }
+
         width: 200px;
         margin-right: 20px;
     }
 
     &.right {
+        @include r(1279) {
+            width: 100%;
+            margin-left: 0;
+
+            .sidebar__banner {
+                display: none;
+            }
+        }
+
         width: 310px;
         margin-left: 20px;
     }
@@ -135,6 +149,71 @@
 
     .radio + .radio {
         margin-top: 12px;
+    }
+
+    &-experts {
+        @include r(1279) {
+            margin-left: -16px;
+            width: calc(100% + 32px);
+            padding: 0 16px;
+            border-left: 0;
+            background-repeat: 0;
+        }
+
+        .swiper-wrapper {
+            @include r(1279) {
+                display: flex;
+            }
+
+            display: block;
+
+            .swiper-slide {
+                @include r(1279) {
+                    border-bottom: 0;
+                    border-right: 1px solid $gray;
+                }
+
+                @include rmin(1280) {
+                    width: 100% !important;
+                }
+
+                border-bottom: 1px solid $gray;
+
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    &-tests,
+    &-vacancy {
+        @include r(1279) {
+            margin-left: -16px;
+            width: calc(100% + 32px);
+            padding: 0 16px;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            @include r(1279) {
+                display: flex;
+            }
+
+            display: block;
+
+            .swiper-slide {
+                @include r(1279) {
+                    margin-bottom: 0;
+                }
+
+                @include rmin(1280) {
+                    width: 100% !important;
+                }
+
+                margin-bottom: -1px;
+            }
+        }
     }
 }
 
@@ -354,6 +433,10 @@
     }
 
     &__top {
+        @include r(1279) {
+            @include fcn;
+        }
+
         @include fsn;
         margin-bottom: 20px;
 
@@ -518,5 +601,56 @@
     &__title {
         font-weight: 600;
         margin-bottom: 16px;
+    }
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 32;
+    padding: 30px 13px;
+    display: none;
+    overflow-y: scroll;
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+    &.left {
+        @include r(1023) {
+            display: block;
+        }
+
+        transform: translateX(-100%);
+        padding-left: 43px;
+        left: 0;
+        width: 275px;
+
+        &.active {
+            transform: translateX(-30px);
+        }
+    }
+
+    &.right {
+        @include r(1279) {
+            display: block;
+        }
+
+        transform: translateX(100%);
+        padding-right: 43px;
+        right: 0;
+        width: 340px;
+
+        &.active {
+            transform: translateX(30px);
+        }
+    }
+
+    .close {
+        margin-left: auto;
+        width: 30px;
+        height: 30px;
+        background: url(../img/icons/close.svg) no-repeat center;
+        background-size: 15px;
+        margin-bottom: 20px;
     }
 }

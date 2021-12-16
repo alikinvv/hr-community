@@ -121,12 +121,28 @@
 
             {{ title.item('', 'Вакансии', 'Все') }}
             {% include "template/vacancy.html" %}
-            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
-            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            <div class="sidebar-vacancy">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                    </div>
+                    <div class="swiper-slide">
+                        {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
+                    </div>
+                </div>
+            </div>
 
             <h2>Тесты</h2>
-            {% include "template/survey.html" %}
-            {% include "template/survey.html" %}
+            <div class="sidebar-tests">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                    <div class="swiper-slide">
+                        {% include "template/survey.html" %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

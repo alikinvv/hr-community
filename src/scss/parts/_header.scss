@@ -1,4 +1,11 @@
 .header {
+    @include r(1023) {
+        position: relative;
+        z-index: 32;
+        background: #fff;
+        padding: 7px 0;
+    }
+
     padding: 27px 0 19px;
     border-bottom: 1px solid #d2dbe3;
 
@@ -7,6 +14,10 @@
     }
 
     &__logo {
+        @include r(1023) {
+            flex-shrink: 0;
+        }
+
         font-weight: 700;
         font-size: 16px;
         transition: $trans;
@@ -37,6 +48,12 @@
     }
 
     &__search {
+        @include r(1023) {
+            padding-right: 0;
+            margin-right: 0;
+            border: 0;
+        }
+
         margin-left: auto;
         @include fce;
         width: 50%;
@@ -71,17 +88,42 @@
     }
 
     &__login {
+        @include r(1023) {
+            flex-direction: column;
+            border-top: 1px solid $gray;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
         @include fcn;
 
         a {
+            @include r(1023) {
+                width: 187px;
+                @include fcc;
+                padding: 8px 16px;
+            }
+
             font-weight: 600;
 
-            &:not(.btn):hover {
-                color: $blue;
+            &:not(.btn) {
+                @include r(1023) {
+                    border: 1px solid #fff;
+                }
+
+                &:hover {
+                    color: $blue;
+                }
             }
         }
 
         .btn {
+            @include r(1023) {
+                margin-left: 0;
+                margin-top: 15px;
+                color: $text;
+            }
+
             margin-left: 22px;
         }
     }
@@ -266,10 +308,109 @@
     }
 }
 
+.hamburger {
+    @include r(1023) {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        display: block;
+        @include fcc;
+    }
+
+    width: 35px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    z-index: 21;
+    margin-right: 10px;
+    margin-left: -10px;
+
+    &.active,
+    &.active:hover {
+        span {
+            background: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+                transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+                transition: bottom 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+            }
+        }
+    }
+
+    span {
+        width: 20px;
+        height: 2px;
+        background: $yellow;
+        position: absolute;
+        top: 18px;
+        transition: background 0.2s ease-in-out 0.1s;
+        pointer-events: none;
+        user-select: none;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: $yellow;
+            left: 0;
+        }
+
+        &::before {
+            top: -7px;
+            transition: top 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
+        }
+
+        &::after {
+            bottom: -7px;
+            transition: bottom 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
+        }
+    }
+}
+
 .menu {
+    @include r(1023) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: $text;
+        width: 297px;
+        z-index: 31;
+        color: #fff;
+        padding-top: 75px;
+        overflow-y: scroll;
+        padding-left: 30px;
+        transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        transform: translateX(-100%);
+
+        .container {
+            padding: 0;
+        }
+    }
+
+    &.active {
+        transform: translateX(-30px);
+    }
+
     &__wrap {
         @include r(1345) {
             @include fcsb;
+        }
+
+        @include r(1023) {
+            flex-direction: column;
+            @include fsn;
+            margin-left: 0;
         }
 
         margin-left: -14px;
@@ -279,6 +420,16 @@
         a {
             @include r(1345) {
                 padding: 21px 14px;
+            }
+
+            @include r(1279) {
+                padding: 16px 7px;
+                font-size: 12px;
+            }
+
+            @include r(1023) {
+                width: 100%;
+                padding: 9px 15px;
             }
 
             padding: 21px 15px;
@@ -331,15 +482,51 @@
 }
 
 .submenu {
+    @include r(1023) {
+        padding: 12px 0;
+
+        & + .section {
+            padding-top: 20px;
+        }
+    }
+
     padding: 17px 0;
     background: #272a31;
     color: #fff;
 
+    & + .triggers {
+        margin-top: 30px;
+        margin-left: 16px;
+        margin-bottom: 0;
+    }
+
     .container {
+        @include r(767) {
+            @include fcsb;
+        }
+
         @include fcn;
     }
 
     &__main {
+        @include r(1279) {
+            font-size: 16px;
+            padding-right: 15px;
+            margin-right: 15px;
+        }
+
+        @include r(1023) {
+            margin-right: 0;
+            padding-right: 15px;
+            padding-left: 15px;
+            border-right: 0;
+            border-top: 1px solid $gray;
+            padding-top: 20px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
         font-weight: 700;
         @include fcn;
         padding-right: 26px;
@@ -362,6 +549,16 @@
     }
 
     &__menu {
+        @include r(1023) {
+            flex-direction: column;
+            @include fsn;
+            margin-right: 0;
+            border: 0;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 5px;
+        }
+
         @include fcn;
         border-right: 1px solid $gray;
         margin-right: 25px;
@@ -371,12 +568,27 @@
                 margin-right: 2.3vw;
             }
 
+            @include r(1279) {
+                font-size: 14px;
+                margin-right: 1.3vw;
+                flex-shrink: 0;
+            }
+
+            @include r(1023) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
             @include fcn;
             transition: $trans;
             margin-right: 2.6vw;
             font-size: 18px;
 
             .icon {
+                @include r(1279) {
+                    font-size: 18px;
+                }
+
                 font-size: 20px;
                 fill: $yellow;
                 margin-right: 10px;
@@ -389,12 +601,25 @@
     }
 
     &__text {
+        @include r(1279) {
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+
+        @include r(767) {
+            margin-left: 0;
+        }
+
         line-height: 1.4;
         margin-right: 20px;
         margin-left: auto;
     }
 
     .btn {
+        @include r(1279) {
+            flex-shrink: 0;
+        }
+
         padding: 8px 20px;
     }
 }

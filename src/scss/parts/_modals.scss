@@ -1,0 +1,105 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.62);
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    transition: $trans;
+
+    &.active {
+        opacity: 1;
+        z-index: 30;
+    }
+}
+
+.modal {
+    @include r(767) {
+        width: 100%;
+        margin: 0 15px;
+        overflow: scroll;
+    }
+
+    display: none;
+    opacity: 0;
+    background: #fff;
+    cursor: default;
+    position: relative;
+    width: 570px;
+    max-height: 90vh;
+    max-width: 95%;
+
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+
+    &[data-modal='tips'] {
+        background: $text;
+        color: #fff;
+        border-radius: 0;
+        padding: 52px 16px 32px;
+
+        br {
+            display: none;
+        }
+    }
+
+    &__header {
+        padding: 40px 60px 20px;
+        border-bottom: 1px solid #efefef;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    &__close {
+        @include r(767) {
+            width: 23px;
+            height: 23px;
+        }
+
+        position: absolute;
+        right: 15px;
+        top: 13px;
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+        transition: $trans;
+
+        &:hover {
+            &::before,
+            &::after {
+                background: $blue;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: $gray;
+            transition: $trans;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
