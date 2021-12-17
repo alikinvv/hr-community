@@ -596,6 +596,16 @@ p {
     .container {
         @include r(1279) {
             flex-wrap: wrap;
+
+            & > .sidebar.right {
+                display: none;
+            }
+        }
+
+        @include r(1023) {
+            & > .sidebar.left {
+                display: none;
+            }
         }
 
         @include fssb;
