@@ -267,6 +267,8 @@ $('body').on('click', '[data-modal]:not(.modal)', (e) => {
     if (!$('.backdrop').hasClass('active')) $('.backdrop').addClass('active');
     $('.modal.active').removeClass('active');
     $(`.modal[data-modal="${$(e.currentTarget).attr('data-modal')}"]`).addClass('active');
+    $('html, body').toggleClass('overflow');
+    $('.backdrop').addClass('zindex');
 
     if ($(e.currentTarget).attr('data-modal') === 'thanks') {
         setTimeout(() => {
@@ -284,6 +286,8 @@ let closeModal = () => {
     $('.mobile-sidebar').removeClass('active');
     $('html, body').removeClass('overflow');
     $('.modal').find('svg').removeClass('animate');
+    $('html, body').removeClass('overflow');
+    $('.backdrop').removeClass('zindex');
 };
 
 $('body').on('click', '.modal__close, .modal .close', closeModal);
@@ -409,8 +413,6 @@ let initTablet1024 = () => {
             } catch {}
         }
     } else {
-        $('.content__main').after($('.mobile-sidebar.right .sidebar'));
-        $('.mobile-sidebar.right').remove();
     }
 };
 
@@ -473,9 +475,6 @@ let initTablet768 = () => {
             swiperItemThree.destroy();
             swiperRubricThree.destroy();
         } catch {}
-
-        $('.content__main').before($('.mobile-sidebar.left .sidebar'));
-        $('.mobile-sidebar.left').remove();
     }
 };
 
