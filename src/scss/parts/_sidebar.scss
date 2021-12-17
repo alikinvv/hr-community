@@ -21,6 +21,16 @@
             }
         }
 
+        @include r(767) {
+            .title {
+                a {
+                    position: static;
+                    transform: none;
+                    margin-top: 0;
+                }
+            }
+        }
+
         width: 310px;
         margin-left: 20px;
     }

@@ -1790,6 +1790,19 @@
         margin-bottom: 15px;
     }
 
+    .item__bottom {
+        @include r(767) {
+            flex-wrap: wrap;
+            @include fcc;
+
+            .checkbox {
+                width: 100%;
+                @include fcc;
+                margin-top: 15px;
+            }
+        }
+    }
+
     &__contacts {
         @include r(767) {
             text-align: center;
@@ -1822,6 +1835,10 @@
     }
 
     &__rating {
+        @include r(767) {
+            margin-bottom: 15px;
+        }
+
         margin-bottom: 42px;
         font-weight: 500;
         color: $gray;
@@ -1903,15 +1920,30 @@
 
 .features {
     div {
+        @include r(767) {
+            display: block;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 14px;
+        }
+
         @include fcsb;
         position: relative;
         margin-bottom: 14px;
 
         &:last-child {
+            @include r(767) {
+                border: 0;
+                padding-bottom: 0;
+            }
+
             margin-bottom: 0;
         }
 
         &::before {
+            @include r(767) {
+                display: none;
+            }
+
             content: '';
             position: absolute;
             bottom: 0;
@@ -1922,12 +1954,21 @@
         }
 
         span {
+            @include r(767) {
+                display: block;
+                padding: 0 !important;
+            }
+
             position: relative;
             background: #fff;
             z-index: 2;
             font-size: 16px;
 
             &:first-child {
+                @include r(767) {
+                    margin-bottom: 5px;
+                }
+
                 padding-right: 10px;
             }
 
@@ -3081,13 +3122,25 @@
 }
 
 .countdown {
+    @include r(1279) {
+        margin-right: 30px;
+    }
+
     .timer {
+        @include r(1279) {
+            font-size: 30px;
+        }
+
         color: $yellow;
         font-weight: 600;
         font-size: 34px;
     }
 
     &__text {
+        @include r(1279) {
+            width: 240px;
+        }
+
         @include fcsb;
         width: 255px;
     }

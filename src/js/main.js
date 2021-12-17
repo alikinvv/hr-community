@@ -506,6 +506,7 @@ initTablet768();
 
 $(window).on('resize', () => {
     ww = $(window).width();
+
     initTablet1024();
     initPhone();
     initTablet768();
