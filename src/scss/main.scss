@@ -1995,12 +1995,20 @@
         }
 
         .icon {
+            @include r(1279) {
+                margin-right: 15px;
+            }
+
             fill: $blue;
             font-size: 27px;
             margin-right: 27px;
             flex-shrink: 0;
 
             &.w-64 {
+                @include r(1279) {
+                    font-size: 27px;
+                }
+
                 font-size: 64px;
             }
         }
@@ -3046,12 +3054,43 @@
             padding: 71px 16px;
         }
 
+        @include r(1279) {
+            & > img {
+                width: 440px;
+            }
+        }
+
+        @include r(1023) {
+            display: block;
+
+            & > img {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+
+        @include r(767) {
+            padding: 40px 16px;
+
+            .tip {
+                font-size: 14px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
         @include fssb;
         padding: 71px 0;
         border-top: 1px solid #696969;
     }
 
     h2 {
+        @include r(767) {
+            margin-bottom: 20px;
+        }
+
         display: block;
         margin-top: 17px;
         margin-bottom: 39px;
@@ -3062,6 +3101,10 @@
     }
 
     &__online {
+        @include r(767) {
+            font-size: 14px;
+        }
+
         border: 1px solid $yellow;
         border-radius: 50px;
         padding: 8px 12px;
@@ -3097,10 +3140,25 @@
     }
 
     &__controls {
+        @include r(767) {
+            flex-direction: column;
+            @include fcc;
+        }
+
         @include fcn;
     }
 
     .btn {
+        @include r(1279) {
+            flex-shrink: 0;
+        }
+
+        @include r(767) {
+            margin-right: 0;
+            order: 2;
+            margin-top: 20px;
+        }
+
         color: $text;
         padding: 20px 39px;
         margin-right: 33px;
@@ -3126,9 +3184,17 @@
         margin-right: 30px;
     }
 
+    @include r(767) {
+        margin-right: 0;
+    }
+
     .timer {
         @include r(1279) {
             font-size: 30px;
+        }
+
+        @include r(767) {
+            font-size: 35px;
         }
 
         color: $yellow;
@@ -3146,31 +3212,96 @@
     }
 }
 
+section.target {
+    .grid {
+        @include r(1023) {
+            .target {
+                width: 100%;
+            }
+        }
+    }
+}
+
 .target {
     h2 {
         margin-bottom: 50px;
     }
 
     &__body {
+        @include r(1023) {
+            display: block;
+        }
+
         @include fcn;
     }
 
     &__img {
+        @include r(1023) {
+            margin-bottom: 20px;
+            @include fcc;
+        }
+
+        @include r(767) {
+            overflow-x: scroll;
+            margin-right: 0;
+            @include fcs;
+        }
+
         @include fcn;
         margin-right: 65px;
 
         img {
+            @include r(1279) {
+                width: 185px;
+            }
+
+            @include r(1023) {
+                width: 250px;
+                margin: 0 10px;
+            }
+
+            @include r(767) {
+                white-space: nowrap;
+                flex-shrink: 0;
+                margin-left: 0;
+            }
+
             margin-right: 20px;
         }
     }
 
     &__title {
+        @include r(1023) {
+            font-size: 20px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include r(767) {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
         font-weight: 600;
         font-size: 24px;
         margin-bottom: 35px;
     }
 
     &__text {
+        @include r(1023) {
+            font-size: 16px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include r(767) {
+            font-size: 14px;
+        }
+
         font-size: 18px;
         line-height: 1.6;
         margin-bottom: 35px;
@@ -3181,6 +3312,10 @@
     }
 
     &__divider {
+        @include r(767) {
+            margin-bottom: 15px;
+        }
+
         width: 65px;
         height: 1px;
         background: $text;
@@ -3194,6 +3329,15 @@
     }
 
     &__item {
+        @include r(1023) {
+            display: block;
+            margin-bottom: 80px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
         @include fsn;
 
         & + .program__item {
@@ -3202,6 +3346,11 @@
     }
 
     &__user {
+        @include r(1023) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
         @include fsn;
         width: 365px;
 
@@ -3224,6 +3373,10 @@
     }
 
     &__list {
+        @include r(1279) {
+            padding-left: 22px;
+        }
+
         border-left: 1px solid $yellow;
         padding-left: 66px;
     }
@@ -3231,6 +3384,15 @@
 
 .speakers {
     &__item {
+        @include r(1023) {
+            display: block;
+            margin-bottom: 80px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
         @include fsn;
 
         & + .speakers__item {
@@ -3238,17 +3400,40 @@
         }
 
         & > img {
+            @include r(1279) {
+                margin-right: 45px;
+            }
+
+            @include r(1023) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            @include r(767) {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
             margin-right: 130px;
         }
     }
 
     &__name {
+        @include r(767) {
+            font-size: 22px;
+        }
+
         font-weight: 600;
         font-size: 28px;
         margin-bottom: 12px;
     }
 
     &__work {
+        @include r(767) {
+            margin-bottom: 20px;
+        }
+
         color: $gray;
         font-size: 16px;
         font-weight: 600;
@@ -3256,6 +3441,15 @@
     }
 
     &__text {
+        @include r(1023) {
+            font-size: 16px;
+        }
+
+        @include r(767) {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
         font-size: 18px;
         line-height: 1.6;
         margin-bottom: 40px;
@@ -3272,15 +3466,35 @@
     h2 {
         margin-bottom: 50px;
     }
+
     &__list {
+        @include r(1279) {
+            display: block;
+        }
+
         @include fcsb;
 
         img {
+            @include r(1279) {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                display: block;
+            }
+
             margin-left: 130px;
         }
     }
 
     &__text {
+        @include r(1023) {
+            font-size: 16px;
+        }
+
+        @include r(767) {
+            font-size: 14px;
+        }
+
         font-size: 18px;
         line-height: 1.6;
     }
@@ -3310,6 +3524,10 @@
     }
 
     &__cell {
+        @include r(767) {
+            padding: 10px 2px;
+        }
+
         width: 100%;
         border: 1px solid $gray;
         border-right: 0;
@@ -3329,6 +3547,13 @@
     }
 
     &__date {
+        @include r(767) {
+            font-size: 12px;
+            width: 22px;
+            height: 22px;
+            margin-bottom: 10px;
+        }
+
         @include fcc;
         margin: 0 auto 15px;
         width: 27px;
@@ -3338,6 +3563,10 @@
     }
 
     &__event {
+        @include r(767) {
+            padding: 2px 3px;
+        }
+
         padding: 7px 4px;
         background: #fff8e4;
         color: $text;
@@ -3359,6 +3588,10 @@
     }
 
     &__time {
+        @include r(767) {
+            display: none;
+        }
+
         font-size: 12px;
         font-weight: 500;
         margin-bottom: 2px;
@@ -3367,6 +3600,19 @@
     &__text {
         @include r(1345) {
             width: 126px;
+        }
+
+        @include r(1279) {
+            width: 95px;
+        }
+
+        @include r(1023) {
+            width: 90px;
+        }
+
+        @include r(767) {
+            font-size: 8px;
+            width: 38px;
         }
 
         @include ellipsis;
@@ -3378,7 +3624,7 @@
 
 .create {
     @include r(767) {
-        padding: 101px 16px 37px;
+        padding: 37px 16px;
     }
 
     padding: 40px 30px;
@@ -3574,6 +3820,10 @@
     }
 
     .form-group {
+        @include r(767) {
+            margin-bottom: 15px;
+        }
+
         width: 100%;
         margin-bottom: 43px;
 
@@ -3596,12 +3846,30 @@
 }
 
 .datepicker {
+    @include r(767) {
+        flex-wrap: wrap;
+        @include fcsb;
+
+        .points {
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            height: 36px !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
     @include fen;
     position: relative;
     margin-top: 34px;
     z-index: 3;
 
     &__input {
+        @include r(767) {
+            margin: 0;
+            margin-bottom: 15px;
+            width: 48%;
+        }
+
         border: 1px solid $gray !important;
         margin-right: 10px;
         padding: 20px !important;
@@ -3622,12 +3890,25 @@
     }
 
     .btn {
+        @include r(767) {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
         height: 58px;
         padding: 8px 28px;
     }
 }
 
 .date-picker-wrapper {
+    @include r(767) {
+        width: calc(100vw - 84px);
+        top: -119px;
+    }
+
     border: 1px solid $yellow;
     background: #fff;
     box-shadow: none;
@@ -3636,6 +3917,13 @@
     top: 0;
     padding: 14px 25px !important;
 
+    .gap {
+        background: transparent;
+        margin-top: 1px;
+        border: 0;
+    }
+
+    .gap-lines,
     .default-top,
     .normal-top,
     .footer,
@@ -3645,6 +3933,14 @@
     }
 
     table {
+        @include r(767) {
+            width: 100% !important;
+
+            &.month2 {
+                display: none;
+            }
+        }
+
         margin-top: 0;
         border: 0;
         width: 294px !important;
@@ -3730,6 +4026,10 @@
     }
 
     .month-wrapper {
+        @include r(767) {
+            width: 100% !important;
+        }
+
         @include fssb;
         border: 0;
         border-top: 1px solid $gray;
@@ -3774,6 +4074,10 @@
     }
 
     &__body {
+        @include r(767) {
+            padding-left: 20px;
+        }
+
         padding-left: 60px;
 
         .options__title {
@@ -3803,6 +4107,12 @@
 .affiliate {
     @include r(767) {
         display: block;
+
+        & + .datepicker {
+            .date-picker-wrapper {
+                top: -83px;
+            }
+        }
     }
 
     @include fcsb;
@@ -3834,8 +4144,8 @@
 .buttons {
     @include r(767) {
         @include flexlist(1px);
-        box-shadow: 0px 0px 15px rgba(134, 135, 135, 0.35);
         margin-bottom: 35px;
+        margin-top: 35px;
     }
 
     @include flexlist(15px);
@@ -3939,6 +4249,10 @@
         }
 
         img {
+            @include r(1023) {
+                max-width: 71px;
+            }
+
             @include centerYa;
             right: 13px;
         }

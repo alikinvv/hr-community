@@ -636,9 +636,25 @@ p {
                 @include flexitem(100%, 1px, 20px);
             }
         }
+
+        .grid.three > a {
+            @include r(1279) {
+                width: calc(50% - 10px) !important;
+                margin: 0 5px 20px !important;
+            }
+
+            @include r(767) {
+                width: calc(100% - 2px) !important;
+                margin: 0 1px 20px !important;
+            }
+        }
     }
 
     iframe {
+        @include r(767) {
+            height: 190px;
+        }
+
         margin-top: 35px;
         margin-bottom: 45px;
     }
@@ -764,6 +780,20 @@ p {
 
             @include flexitem(33.33%, 10px, 20px);
         }
+
+        div.hide {
+            @include r(1279) {
+                display: block;
+                margin-bottom: 0 !important;
+                width: calc(50% - 10px) !important;
+            }
+
+            @include r(767) {
+                width: 100% !important;
+            }
+
+            display: none;
+        }
     }
 
     &.four {
@@ -843,6 +873,17 @@ p {
             white-space: nowrap;
             margin-right: 10px !important;
             margin-left: 0 !important;
+        }
+    }
+}
+
+.swiper-books.five {
+    .swiper-wrapper {
+        width: 100%;
+        margin: 0 -10px;
+
+        .swiper-slide {
+            @include flexitem(20%, 10px, 20px);
         }
     }
 }
@@ -1193,6 +1234,10 @@ table {
     margin-top: 30px;
 
     th {
+        @include r(767) {
+            white-space: nowrap;
+        }
+
         text-align: left;
     }
 

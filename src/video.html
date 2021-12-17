@@ -32,6 +32,8 @@
                 <a href="javascript:void(0)"><span>Статьи</span></a>
             </div>
 
+            {% include "template/triggers.html" %}
+
             <h2>Оценка и снижение нежелательной текучести в организации</h2>
 
             <div class="article__features">
@@ -143,28 +145,12 @@
 
             {{ title.item('', 'Вакансии', 'Все') }}
             {% include "template/vacancy.html" %}
-            <div class="sidebar-vacancy">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
-                    </div>
-                    <div class="swiper-slide">
-                        {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
-                    </div>
-                </div>
-            </div>
+            {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+            {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
 
             <h2>Тесты</h2>
-            <div class="sidebar-tests">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        {% include "template/survey.html" %}
-                    </div>
-                    <div class="swiper-slide">
-                        {% include "template/survey.html" %}
-                    </div>
-                </div>
-            </div>
+            {% include "template/survey.html" %}
+            {% include "template/survey.html" %}
         </div>
     </div>
 </section>

@@ -9,6 +9,28 @@
     padding: 27px 0 19px;
     border-bottom: 1px solid #d2dbe3;
 
+    &.auth {
+        @include r(767) {
+            .header__logo {
+                font-size: 14px;
+                width: 27px;
+                color: transparent;
+
+                span {
+                    display: none;
+                }
+
+                .icon {
+                    flex-shrink: 0;
+                }
+            }
+
+            .header__search .input {
+                right: 150px;
+            }
+        }
+    }
+
     .container {
         @include r(767) {
             position: relative;
@@ -159,6 +181,10 @@
     }
 
     &__user {
+        @include r(767) {
+            flex-shrink: 0;
+        }
+
         position: relative;
     }
 
@@ -197,6 +223,10 @@
         transition: $trans;
 
         &.active {
+            @include r(1023) {
+                bottom: -8px;
+            }
+
             opacity: 1;
             pointer-events: all;
             bottom: -21px;
@@ -268,6 +298,10 @@
     }
 
     &__notification {
+        @include r(767) {
+            margin-right: 15px;
+        }
+
         position: relative;
         margin-right: 33px;
 
@@ -304,6 +338,10 @@
             }
 
             &.active {
+                @include r(1023) {
+                    bottom: -11px;
+                }
+
                 opacity: 1;
                 pointer-events: all;
                 user-select: initial;

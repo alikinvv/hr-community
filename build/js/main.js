@@ -343,9 +343,9 @@ var initTablet1024 = function initTablet1024() {
       });
       swiperBooksFive = new Swiper('.swiper-books.five', {
         spaceBetween: 10,
-        slidesPerView: 2.3,
+        slidesPerView: 1.3,
         breakpoints: {
-          1024: {
+          768: {
             slidesPerView: 2.8
           }
         }
