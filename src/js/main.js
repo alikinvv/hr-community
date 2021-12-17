@@ -139,6 +139,22 @@ $('body').on('click', '.select:not(.active) .select__current', (e) => {
     $(e.currentTarget).parent().addClass('active');
 });
 
+$('body').on('click', '.counter__plus', (e) => {
+    $(e.currentTarget)
+        .parent()
+        .find('.counter__num')
+        .text(parseInt($(e.currentTarget).parent().find('.counter__num').text()) + 1);
+});
+
+$('body').on('click', '.counter__minus', (e) => {
+    if (parseInt($(e.currentTarget).parent().find('.counter__num').text()) > 1) {
+        $(e.currentTarget)
+            .parent()
+            .find('.counter__num')
+            .text(parseInt($(e.currentTarget).parent().find('.counter__num').text()) - 1);
+    }
+});
+
 $('.countdown .timer').countdown('2022/01/01', function (event) {
     $(this).text(event.strftime('%D : %H : %M : %S'));
 });

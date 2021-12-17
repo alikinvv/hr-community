@@ -116,6 +116,14 @@ $('body').on('click', '.select:not(.active) .select__current', function (e) {
   $('.select').removeClass('active');
   $(e.currentTarget).parent().addClass('active');
 });
+$('body').on('click', '.counter__plus', function (e) {
+  $(e.currentTarget).parent().find('.counter__num').text(parseInt($(e.currentTarget).parent().find('.counter__num').text()) + 1);
+});
+$('body').on('click', '.counter__minus', function (e) {
+  if (parseInt($(e.currentTarget).parent().find('.counter__num').text()) > 1) {
+    $(e.currentTarget).parent().find('.counter__num').text(parseInt($(e.currentTarget).parent().find('.counter__num').text()) - 1);
+  }
+});
 $('.countdown .timer').countdown('2022/01/01', function (event) {
   $(this).text(event.strftime('%D : %H : %M : %S'));
 });

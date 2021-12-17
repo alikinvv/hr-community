@@ -3943,3 +3943,37 @@
         }
     }
 }
+
+.counter {
+    @include fcn;
+
+    &__plus,
+    &__minus {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $yellow;
+        @include fcc;
+        transition: $trans;
+        cursor: pointer;
+        user-select: none;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 1;
+
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
+    }
+
+    &__num {
+        font-size: 16px;
+        width: 45px;
+        text-align: center;
+        padding: 0 3px;
+        user-select: none;
+        font-weight: 700;
+        line-height: 1;
+    }
+}

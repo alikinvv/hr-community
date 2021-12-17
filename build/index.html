@@ -131,11 +131,11 @@
             <li><a href="article-list.html">Список статей</a></li>
             <li><a href="article.html">Статья</a></li>
             <li><a href="dictionary.html">Словарь терминов</a></li>
-            <li><a href="catalog.html">Список товаров</a></li>
+            <li><a href="catalog.html">Список товаров <span>[Модальное: Кнопка "Подбронее"]</a></li>
             <li><a href="experts.html">Список экспертов</a></li>
             <li><a href="vacancy-list.html">Список вакансий</a></li>
             <li><a href="vacancy-category.html">Категории вакансий</a></li>
-            <li><a href="stock-list.html">Список акций</a></li>
+            <li><a href="stock-list.html">Список акций <span>[Модальное: Кнопка "Получить"]</span></a></li>
             <li><a href="test-list.html">Список тестов</a></li>
             <li><a href="course-list.html">Список курсов</a></li>
             <li><a href="events.html">Список мероприятий</a></li>
@@ -149,8 +149,8 @@
             <li><a href="verification.html">Верификация</a></li>
             <li><a href="request.html">Запрос на запись</a></li>
             <li><a href="friend.html">Пригласить друга</a></li>
-            <li><a href="product.html">Карточка товара</a></li>
-            <li><a href="faq.html">Вопрос/ответ</a></li>
+            <li><a href="product.html">Карточка товара <span>[Модальное: Кнопка "Купить"]</span></a></li>
+            <li><a href="faq.html">Вопрос/ответ <span>[Модальное: Кнопка "Перейти в карточку на сайте"]</span></a></li>
             <li><a href="company.html">Карточка компании</a></li>
             <li><a href="expert.html">Карточка эксперта</a></li>
             <li><a href="service.html">Карточка сервиса</a></li>
@@ -252,14 +252,147 @@
 </footer>
 
 <div class="backdrop">
-    <div class="modal" data-modal="sale">
+    <div class="modal" data-modal="promo">
         <div class="modal__content">
             <div class="modal__close"></div>
             <div class="modal__body">
-
+                <div>
+                    <div class="modal__header">
+                        <img src="img/life.png" alt="">
+                        <h3>Скидка 10% на смартфон <br> Скидка 10% на смартыон</h3>
+                    </div>
+                    <div class="modal__text">Применяйте промокод и получайте <br>
+                        дополнительную скидку 20% на вашу <br>
+                        покупку. Скидка распространяется на весь <br>
+                        ассортимент товаров на сайте</div>
+                    <div class="modal__bottom">
+                        <div>
+                            <span>Как воспользоваться?</span>
+                            Введите этот <br> промокод на сайте
+                        </div>
+                        <div>
+                            <span>Срок действия:</span>
+                            до 11.12.2021
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/promo.svg" alt="">
+                    <div class="modal__title">Получить промокод</div>
+                    <div class="modal__text">Укажите емейл чтобы <br> получить промокод</div>
+                    <form action="">
+                        <div class="input">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <button class="btn">Получить</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="modal" data-modal="promo-code">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">
+                <div>
+                    <div class="modal__header">
+                        <img src="img/life.png" alt="">
+                        <h3>Скидка 10% на смартфон <br> Скидка 10% на смартыон</h3>
+                    </div>
+                    <div class="modal__text">Применяйте промокод и получайте <br>
+                        дополнительную скидку 20% на вашу <br>
+                        покупку. Скидка распространяется на весь <br>
+                        ассортимент товаров на сайте</div>
+                    <div class="modal__bottom">
+                        <div>
+                            <span>Как воспользоваться?</span>
+                            Введите этот <br> промокод на сайте
+                        </div>
+                        <div>
+                            <span>Срок действия:</span>
+                            до 11.12.2021
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/promo.svg" alt="">
+                    <div class="modal__title">Получить промокод</div>
+                    <div class="modal__title">c456-890-cgrwh-khgtm</div>
+                    <a href="javascript:void(0)" class="btn">Скопировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="success">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">
+                <div>
+                    <h3>Заявка на заказ продукта</h3>
+
+                    <div class="modal__flex">
+                        <span>Кол-во товара:</span>
+                        <div class="counter">
+                            <div class="counter__minus">-</div>
+                            <div class="counter__num">20</div>
+                            <div class="counter__plus">+</div>
+                        </div>
+                    </div>
+
+                    <form action="">
+                        <div class="input">
+                            <input type="text" placeholder="ФИО">
+                        </div>
+                        <div class="input">
+                            <input type="text" class="phone-input" placeholder="Телефон">
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <div class="input">
+                                <input type="text" placeholder="Город">
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Индекс">
+                            </div>
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Адрес доставки">
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Комментарий к заказу">
+                        </div>
+                        <button class="btn">Отправить запрос</button>
+                    </form>
+                </div>
+                <div>
+                    <img src="img/book2.png" alt="">
+                    <div class="modal__title">Дюна. Мессия дюны дети <br> дюны. Автор Фрэнк <br> Герберт</div>
+                    <div class="product__code">Артикул: 23456</div>
+                    <img src="img/stars.svg" alt="">
+                    <div class="product__price">11 499 ₽ <span>1 499</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="thanks">
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">
+                <img src="img/thanks.svg" alt="">
+                <div>
+                    <h2>Спасибо, ваша заявка <br> на участие принята!</h2>
+                    <div class="modal__text">Наш менеджер свяжется с вами в ближайшее <br> время, чтобы подтвердить
+                        участие.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
