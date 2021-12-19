@@ -151,7 +151,7 @@
 
 
             <h2>Акции</h2>
-            <div class="stock" data-modal="promo">
+            <a href="javascript:void(0)" class="stock" data-modal="promo">
     <div class="stock__tag">Топ <br> 10</div>
     <div class="stock__img">
         <img src="img/soft.png" alt="">
@@ -161,9 +161,9 @@
     <div class="stock__price">5 000 ₽</div>
     <span>Активен до: 01.03.2021</span>
 
-    <a href="javascript:void(0)" class="btn">Получить</a>
-</div>
-            <div class="stock" data-modal="promo">
+    <div class="btn">Получить</div>
+</a>
+            <a href="javascript:void(0)" class="stock" data-modal="promo">
     <div class="stock__tag">Топ <br> 10</div>
     <div class="stock__img">
         <img src="img/soft.png" alt="">
@@ -173,8 +173,8 @@
     <div class="stock__price">5 000 ₽</div>
     <span>Активен до: 01.03.2021</span>
 
-    <a href="javascript:void(0)" class="btn">Получить</a>
-</div>
+    <div class="btn">Получить</div>
+</a>
 
             <h2>Книги</h2>
             <a href="javascript:void(0)" class="book" data-modal="promo-code">
@@ -231,12 +231,13 @@
                 </div>
             </div>
 
-            <h2>Что такое интернет вещей: принцип работы и примеры использования</h2>
+            <h1 class="h2">Что такое интернет вещей: принцип работы и примеры использования</h1>
 
             <div class="article__features">
-                <div class="checkbox center">
+                <div class="checkbox center tippy-parent">
                     <label for="c1">В избранное</label>
                     <input type="checkbox" id="c1">
+                    <div class="tippy right">Текст подсказки</div>
                 </div>
                 <div class="item__bottom">
                     <div class="item__bottom-item">11. 11. 2021</div>
@@ -245,12 +246,6 @@
                             <use xlink:href="img/symbol-defs.svg#icon-eye"></use>
                         </svg>
                         268
-                    </div>
-                    <div class="item__bottom-item">
-                        <svg class="icon">
-                            <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                        </svg>
-                        2688
                     </div>
                     <div class="item__bottom-item">
                         <svg class="icon">
@@ -263,6 +258,10 @@
                             <use xlink:href="img/symbol-defs.svg#icon-time"></use>
                         </svg>
                         5 минут
+                    </div>
+                    <div class="item__bottom-item like-parent">
+                        <div class="like"></div>
+                        2688
                     </div>
                 </div>
                 <div class="social line gray">
@@ -298,7 +297,50 @@
                     </div>
                 </a>
                 <div class="rating">
-                    <img src="img/stars.svg" alt="">
+                    <div class="stars rating" data-count="4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.2 14">
+                            <g class="active" data-star="1">
+                                <path class="st0"
+                                    d="M14.9 5.3l-5-.7L7.6 0 5.4 4.6l-5 .7L4 8.9 3.1 14l4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9L2 5.8l3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                </path>
+                                <path class="st0"
+                                    d="M9.6 5L7.6.9 5.6 5l-4.4.6 3.2 3.2-.7 4.5 3.9-2.1 4 2.1-.8-4.5 3.3-3.2z">
+                                </path>
+                            </g>
+                            <g class="active" data-star="2">
+                                <path class="st0"
+                                    d="M33 5.3l-5-.7L25.7 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1L33 5.3zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                </path>
+                                <path class="st0"
+                                    d="M27.7 5l-2-4.1-2 4.1-4.4.6 3.2 3.2-.8 4.5 4-2.1 4 2.1-.8-4.5 3.2-3.2z">
+                                </path>
+                            </g>
+                            <g class="active" data-star="3">
+                                <path class="st0"
+                                    d="M51.1 5.3l-5-.7L43.8 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                </path>
+                                <path class="st0"
+                                    d="M45.8 5l-2-4.1-2 4.1-4.4.6 3.2 3.2-.8 4.5 4-2.1 4 2.1-.8-4.5 3.2-3.2z">
+                                </path>
+                            </g>
+                            <g class="active" data-star="4">
+                                <path class="st0"
+                                    d="M69.2 5.3l-5-.7L61.9 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                </path>
+                                <path class="st0"
+                                    d="M63.8 5L61.9.9l-2 4.1-4.5.6 3.2 3.2-.7 4.5 4-2.1 3.9 2.1-.7-4.5 3.2-3.2z">
+                                </path>
+                            </g>
+                            <g data-star="5">
+                                <path class="st0"
+                                    d="M87.2 5.3l-5-.7L79.9 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                </path>
+                                <path class="st0"
+                                    d="M81.8 5L79.9.9l-2 4.1-4.5.6 3.2 3.2-.7 4.5 4-2.1 3.9 2.1-.7-4.5 3.2-3.2z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
                     <span>Средняя оценка: <strong>5</strong></span>
                 </div>
                 <div class="play">
@@ -346,8 +388,8 @@
             </div>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
-                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <span
-                    class="highlight">Если вы в поисках работы открыто</span>, не анонимно, то мы также отправим
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <a
+                    href="javascript:void(0)"> Если вы в поисках работы открыто</a>, не анонимно, то мы также отправим
                 информацию о вас </p>
 
             <div class="blockquote">
@@ -372,8 +414,8 @@
             </div>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
-                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <span
-                    class="highlight">Если вы в поисках работы открыто</span>, не анонимно, то мы также отправим
+                подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. <a
+                    href="javascript:void(0)">Если вы в поисках работы открыто</a>, не анонимно, то мы также отправим
                 информацию о вас </p>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
@@ -450,7 +492,50 @@
                 <div class="article__bottom-item">
                     <h4>Вам понравился материал?</h4>
                     <div class="rating">
-                        <img src="img/stars.svg" alt="">
+                        <div class="stars rating" style="width: 135px" data-count="4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.2 14">
+                                <g class="active" data-star="1">
+                                    <path class="st0"
+                                        d="M14.9 5.3l-5-.7L7.6 0 5.4 4.6l-5 .7L4 8.9 3.1 14l4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9L2 5.8l3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                    </path>
+                                    <path class="st0"
+                                        d="M9.6 5L7.6.9 5.6 5l-4.4.6 3.2 3.2-.7 4.5 3.9-2.1 4 2.1-.8-4.5 3.3-3.2z">
+                                    </path>
+                                </g>
+                                <g class="active" data-star="2">
+                                    <path class="st0"
+                                        d="M33 5.3l-5-.7L25.7 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1L33 5.3zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                    </path>
+                                    <path class="st0"
+                                        d="M27.7 5l-2-4.1-2 4.1-4.4.6 3.2 3.2-.8 4.5 4-2.1 4 2.1-.8-4.5 3.2-3.2z">
+                                    </path>
+                                </g>
+                                <g class="active" data-star="3">
+                                    <path class="st0"
+                                        d="M51.1 5.3l-5-.7L43.8 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                    </path>
+                                    <path class="st0"
+                                        d="M45.8 5l-2-4.1-2 4.1-4.4.6 3.2 3.2-.8 4.5 4-2.1 4 2.1-.8-4.5 3.2-3.2z">
+                                    </path>
+                                </g>
+                                <g class="active" data-star="4">
+                                    <path class="st0"
+                                        d="M69.2 5.3l-5-.7L61.9 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                    </path>
+                                    <path class="st0"
+                                        d="M63.8 5L61.9.9l-2 4.1-4.5.6 3.2 3.2-.7 4.5 4-2.1 3.9 2.1-.7-4.5 3.2-3.2z">
+                                    </path>
+                                </g>
+                                <g data-star="5">
+                                    <path class="st0"
+                                        d="M87.2 5.3l-5-.7L79.9 0l-2.2 4.6-5 .7 3.6 3.6-.9 5.1 4.5-2.4 4.5 2.4-.9-5.1 3.7-3.6zm-7.3 5.4l-3.5 1.8.7-3.9-2.8-2.8 3.9-.5 1.7-3.6 1.7 3.6 3.9.6-2.8 2.8.7 3.9-3.5-1.9z">
+                                    </path>
+                                    <path class="st0"
+                                        d="M81.8 5L79.9.9l-2 4.1-4.5.6 3.2 3.2-.7 4.5 4-2.1 3.9 2.1-.7-4.5 3.2-3.2z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
                         <span>Средняя оценка: <strong>5</strong></span>
                     </div>
                 </div>
@@ -610,13 +695,7 @@
     </div>
 </div>
 
-            
-<div class="title ">
-    
-    <h2>Рекомендуем почитать</h2>
-    <a href="javascript:void(0)"></a>
-</div>
-
+            <h2>Рекомендуем почитать</h2>
             <div class="grid two mb-100">
                 
 
@@ -659,15 +738,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -707,15 +784,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -764,15 +839,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -812,15 +885,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -991,15 +1062,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -1039,15 +1108,13 @@
             </div>
             <div class="item__bottom-item">
                 <svg class="icon">
-                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-                </svg>
-                2688
-            </div>
-            <div class="item__bottom-item">
-                <svg class="icon">
                     <use xlink:href="img/symbol-defs.svg#icon-message"></use>
                 </svg>
                 26
+            </div>
+            <div class="item__bottom-item like-parent">
+                <div class="like"></div>
+                2688
             </div>
         </div>
         
@@ -1097,15 +1164,13 @@
         </div>
         <div class="item__bottom-item">
             <svg class="icon">
-                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-            </svg>
-            26
-        </div>
-        <div class="item__bottom-item">
-            <svg class="icon">
                 <use xlink:href="img/symbol-defs.svg#icon-message"></use>
             </svg>
             1256
+        </div>
+        <div class="item__bottom-item like-parent">
+            <div class="like"></div>
+            2688
         </div>
 
         <div class="more">
@@ -1132,15 +1197,13 @@
         </div>
         <div class="item__bottom-item">
             <svg class="icon">
-                <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
-            </svg>
-            26
-        </div>
-        <div class="item__bottom-item">
-            <svg class="icon">
                 <use xlink:href="img/symbol-defs.svg#icon-message"></use>
             </svg>
             1256
+        </div>
+        <div class="item__bottom-item like-parent">
+            <div class="like"></div>
+            2688
         </div>
 
         <div class="more">
@@ -1217,9 +1280,9 @@
     </div>
 
     <div class="solve__body">
-        <div class="solve__title">Управленческое консультирование</div>
+        <div class="solve__title">Управленческое <br> консультирование</div>
         <div class="solve__text">Разработанная стратегия маркетинга, которая привела 3000 заявок с конверсией 40% в
-            покупку за 2 месяца</div>
+            покупку за 2 месяца 40% в покупку за 2 месяца</div>
         <div class="solve__bottom">
             <div class="tags">
                 <div>Менеджмент</div>

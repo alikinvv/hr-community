@@ -261,6 +261,7 @@ $('body').on('submit', 'form', function (e) {
   e.preventDefault();
 });
 sameHeight('.grid.three .article', '.article__title', 3);
+sameHeight('.grid.three .swiper-slide', '.item__title');
 var swiperItemThree = Swiper;
 var sidebarExperts = Swiper;
 var sidebarVacancy = Swiper;
@@ -269,6 +270,7 @@ var sidebarTests = Swiper;
 var swiperBooksSix = Swiper;
 var swiperBooksFive = Swiper;
 var swiperRubricThree = Swiper;
+var swiperStock = Swiper;
 
 var initTablet1024 = function initTablet1024() {
   if (ww <= 1279 && !$('body').hasClass('s-1024')) {
@@ -430,6 +432,10 @@ var initPhone = function initPhone() {
       spaceBetween: 10,
       slidesPerView: 1.1
     });
+    swiperStock = new Swiper('.swiper-stock', {
+      spaceBetween: 10,
+      slidesPerView: 1.3
+    });
     resetHeight('.grid.three .article', '.article__title');
     sameHeight('.sidebar-vacancy .swiper-slide', '.vacancy__title');
   } else if (ww >= 768 && $('body').hasClass('s-320')) {
@@ -449,4 +455,34 @@ $(window).on('resize', function () {
   initTablet1024();
   initPhone();
   initTablet768();
+});
+$('.like-parent').on('click ', function () {
+  $(this).find('.like').toggleClass('is_animating');
+});
+/*when the animation is over, remove the class*/
+
+$('.like').on('animationend', function () {
+  $(this).toggleClass('is_animating');
+});
+$('body').on('mouseenter', '.stars.rating g', function (e) {
+  $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+
+  for (var i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+    $(e.currentTarget).closest('.stars.rating').find("g[data-star=\"".concat(i, "\"]")).addClass('active');
+  }
+});
+$('body').on('click', '.stars.rating g', function (e) {
+  $(e.currentTarget).closest('.stars.rating').attr('data-count', $(e.currentTarget).attr('data-star'));
+  $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+
+  for (var i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+    $(e.currentTarget).closest('.rating').find("g[data-star=\"".concat(i, "\"]")).addClass('active');
+  }
+});
+$('body').on('mouseleave', '.stars.rating', function (e) {
+  $(e.currentTarget).find('g').removeClass('active');
+
+  for (var i = 1; i <= $(e.currentTarget).attr('data-count'); i++) {
+    $(e.currentTarget).find("g[data-star=\"".concat(i, "\"]")).addClass('active');
+  }
 });

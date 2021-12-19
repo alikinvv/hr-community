@@ -2,6 +2,7 @@
 
 {% import "template/sidebar/banner.html" as banner %}
 {% import "template/sidebar/subscribe.html" as subscribe %}
+{% import "template/sidebar/time.html" as time %}
 {% import "template/item.html" as item %}
 {% import "template/title.html" as title %}
 {% import "template/expert.html" as expert %}
@@ -33,7 +34,7 @@
 
             {% include "template/triggers.html" %}
 
-            <h2>Мероприятия</h2>
+            <h1 class="h2">Мероприятия</h1>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
                 подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
@@ -85,6 +86,8 @@
             {% include "template/text.html" %}
         </div>
         <div class="sidebar right">
+            {{ time.item('Получайте уведомления о новых мероприятиях первыми.', 'Подпишитесь на оповещение',
+            'Подписаться', 'purple') }}
             {% include "template/sidebar/social.html" %}
 
             <h2>Подобрать:</h2>

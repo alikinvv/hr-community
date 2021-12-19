@@ -23,7 +23,7 @@
         @include fesb;
         margin-bottom: 19px;
 
-        h2 {
+        .h2 {
             @include r(767) {
                 margin-bottom: 10px;
             }
@@ -43,11 +43,7 @@
     }
 
     &__img {
-        @include r(767) {
-            margin-bottom: 20px;
-        }
-
-        margin-bottom: 38px;
+        margin-bottom: 16px;
         width: 100%;
     }
 
@@ -498,12 +494,22 @@
         &-name {
             font-size: 14px;
             color: $text;
+            display: inline-block;
         }
 
         &-work {
             font-size: 14px;
             color: #858a8d;
         }
+    }
+
+    &__text {
+        font-weight: normal;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 15px;
+        line-height: 1.4;
+        margin-bottom: 0;
     }
 }
 
@@ -613,7 +619,13 @@
         }
 
         @include fsn;
-        padding-left: 70px;
+        border-bottom: 1px dashed $gray;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+
+        &:last-child {
+            border: 0;
+        }
 
         form {
             @include r(767) {
@@ -654,7 +666,7 @@
                 margin-right: 11px;
             }
 
-            width: 44px;
+            width: 50px;
             margin-right: 20px;
             flex-shrink: 0;
         }
@@ -668,6 +680,9 @@
                 }
 
                 padding-left: 0;
+                border: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
 
                 img {
                     width: 34px;

@@ -307,6 +307,7 @@ $('body').on('submit', 'form', (e) => {
 });
 
 sameHeight('.grid.three .article', '.article__title', 3);
+sameHeight('.grid.three .swiper-slide', '.item__title');
 
 var swiperItemThree = Swiper;
 var sidebarExperts = Swiper;
@@ -316,6 +317,7 @@ var sidebarTests = Swiper;
 var swiperBooksSix = Swiper;
 var swiperBooksFive = Swiper;
 var swiperRubricThree = Swiper;
+var swiperStock = Swiper;
 
 let initTablet1024 = () => {
     if (ww <= 1279 && !$('body').hasClass('s-1024')) {
@@ -489,6 +491,11 @@ let initPhone = () => {
             slidesPerView: 1.1,
         });
 
+        swiperStock = new Swiper('.swiper-stock', {
+            spaceBetween: 10,
+            slidesPerView: 1.3,
+        });
+
         resetHeight('.grid.three .article', '.article__title');
         sameHeight('.sidebar-vacancy .swiper-slide', '.vacancy__title');
     } else if (ww >= 768 && $('body').hasClass('s-320')) {
@@ -510,4 +517,37 @@ $(window).on('resize', () => {
     initTablet1024();
     initPhone();
     initTablet768();
+});
+
+$('.like-parent').on('click ', function () {
+    $(this).find('.like').toggleClass('is_animating');
+});
+
+/*when the animation is over, remove the class*/
+$('.like').on('animationend', function () {
+    $(this).toggleClass('is_animating');
+});
+
+$('body').on('mouseenter', '.stars.rating g', (e) => {
+    $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+
+    for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+        $(e.currentTarget).closest('.stars.rating').find(`g[data-star="${i}"]`).addClass('active');
+    }
+});
+
+$('body').on('click', '.stars.rating g', (e) => {
+    $(e.currentTarget).closest('.stars.rating').attr('data-count', $(e.currentTarget).attr('data-star'));
+    $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+
+    for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+        $(e.currentTarget).closest('.rating').find(`g[data-star="${i}"]`).addClass('active');
+    }
+});
+
+$('body').on('mouseleave', '.stars.rating', (e) => {
+    $(e.currentTarget).find('g').removeClass('active');
+    for (let i = 1; i <= $(e.currentTarget).attr('data-count'); i++) {
+        $(e.currentTarget).find(`g[data-star="${i}"]`).addClass('active');
+    }
 });

@@ -98,8 +98,21 @@
         width: 100%;
     }
 
+    @include r(1023) {
+        margin-bottom: 30px;
+    }
+
     margin-bottom: 52px;
     max-width: 750px;
+
+    & + .social {
+        @include r(767) {
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        display: none;
+    }
 
     &__main {
         .swiper-slide {
@@ -148,7 +161,7 @@
     }
 
     @include fcn;
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
 
     &.fcsb {
         @include r(767) {
@@ -434,7 +447,8 @@
 .solve {
     border: 1px solid $gray;
     transition: $trans;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
         background: #f6faff;
@@ -457,6 +471,9 @@
 
     &__body {
         padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     &__title {
@@ -467,11 +484,12 @@
 
     &__text {
         line-height: 1.4;
-        margin-bottom: 44px;
+        margin-bottom: 28px;
     }
 
     &__bottom {
         @include fcsb;
+        margin-top: auto;
     }
 }
 
@@ -728,6 +746,7 @@
 .rating {
     text-align: center;
 
+    .stars,
     img {
         display: block;
         margin-bottom: 8px;
@@ -922,6 +941,12 @@
 
         padding: 13px 0;
         border-bottom: 1px solid $gray;
+        display: block;
+        transition: $trans;
+
+        &:hover {
+            color: $blue;
+        }
 
         &:last-child {
             border: 0;
@@ -4342,5 +4367,125 @@ section.target {
         user-select: none;
         font-weight: 700;
         line-height: 1;
+    }
+}
+
+.like-parent {
+    cursor: pointer;
+}
+
+.like {
+    background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    width: 40px;
+    height: 40px;
+    transform: scale(1.5);
+}
+
+.is_animating {
+    background-position: right;
+    transition: all 0.8s steps(28);
+}
+
+@keyframes heart-burst {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+
+.tippy {
+    @include r(767) {
+        display: none;
+    }
+
+    position: absolute;
+    top: -15px;
+    left: -18px;
+    transform: translateY(-100%);
+    background: $blue;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.33;
+    padding: 7px 9px;
+    transition: $trans;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    width: auto !important;
+    z-index: 3;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        width: 0;
+        height: 0;
+        transform: translateY(100%);
+        border: 0 solid transparent;
+        border-left-width: 8px;
+        border-right-width: 8px;
+        border-top: 8px solid $blue;
+    }
+
+    &.right {
+        left: initial;
+        right: -18px;
+
+        &::before {
+            left: initial;
+            right: 20px;
+        }
+    }
+
+    &-parent {
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            .tippy {
+                @include r(1023) {
+                    opacity: 0;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                opacity: 1;
+                pointer-events: all;
+                user-select: initial;
+            }
+        }
+    }
+}
+
+.stars {
+    path {
+        fill: #ffd15b;
+    }
+
+    g {
+        path:last-child {
+            opacity: 0;
+            transition: $trans;
+        }
+
+        &.active {
+            path:last-child {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.rating {
+    g {
+        cursor: pointer;
     }
 }

@@ -7,6 +7,14 @@
         <div class="sidebar left">
             {% include "template/sidebar/menu.html" %}
             {{ banner.item('banner.png', 'Рекламный баннер') }}
+
+            <h2>Книги</h2>
+            {% include "template/book.html" %}
+
+            <h2>Материалы</h2>
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
+            {% include "template/book.html" %}
         </div>
         <div class="content__main">
             <div class="breadcrumbs">
@@ -23,7 +31,7 @@
                 </div>
             </div>
 
-            <h2>Компании</h2>
+            <h1 class="h2">Компании</h1>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
                 подгрузить ваше резюме <a href="javascript:void(0)">Читать далее</a></p>

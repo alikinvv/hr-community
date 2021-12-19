@@ -28,15 +28,15 @@
             <div class="slider">
                 <div class="swiper slider__main">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <a href="javascript:void(0)" class="swiper-slide">
                             <img src="img/main-slide.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
+                        </a>
+                        <a href="javascript:void(0)" class="swiper-slide">
                             <img src="img/main-slide.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
+                        </a>
+                        <a href="javascript:void(0)" class="swiper-slide">
                             <img src="img/main-slide.png" alt="">
-                        </div>
+                        </a>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -54,6 +54,8 @@
                     </div>
                 </div>
             </div>
+
+            {% include "template/sidebar/social.html" %}
 
             {{ title.item('fire', 'Новинки для чтения', 'Больше новинок') }}
             <div class="grid two">
@@ -89,8 +91,8 @@
                 </div>
                 <div class="swiper-slide">
                     {{ item.item('мастер класс', 'price', '', '', '25 000 ₽', 'a6.png', 'Тренинг “Запуск своего
-                    собственного
-                    онлайн-проекта', 'tags-2', 'online', 'nasa.png', 'Иванова Ксения')}}
+                    собственного онлайн-проекта Мероприятия и к онлайн-проекта Мероприятия и к', 'tags-2', 'online',
+                    'nasa.png', 'Иванова Ксения')}}
                 </div>
                 <div class="swiper-slide">{{ item.item('конференция', 'price', '', '', '120 000 ₽ ', 'a7.png', 'Тренинг
                     “Запуск своего собственного
@@ -137,6 +139,28 @@
     </div>
 </section>
 
+<div class="section mobile">
+    <div class="container">
+        {{ title.item('user', 'Эксперты:', 'Все', '', 'mobile-flex') }}
+        <div class="sidebar-experts swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{ expert.item('user1.png', 'Александр Нежельский') }}
+                </div>
+                <div class="swiper-slide">
+                    {{ expert.item('user2.png', 'Александр Нежельский') }}
+                </div>
+                <div class="swiper-slide">
+                    {{ expert.item('user3.png', 'Александр Нежельский') }}
+                </div>
+                <div class="swiper-slide">
+                    {{ expert.item('user4.png', 'Александр Нежельский') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="section bg">
     <div class="container">
         {{ title.item('blank', 'Рубрики нашей академии', 'Все рубрики') }}
@@ -161,6 +185,22 @@
                     {{ rubric.item('HR') }}
                     {{ rubric.item('Маркетинг') }}
                     {{ rubric.item('Пульс опросы') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section mobile">
+    <div class="container">
+        {{ title.item('fire', 'Что новенького?', 'Все', 'red') }}
+        <div class="sidebar-vacancy">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{ vacancy.item('HR менеджер (стажер) в компанию аналитики и финансов ') }}
+                </div>
+                <div class="swiper-slide">
+                    {{ vacancy.item('HR менеджер (стажер) в компанию ') }}
                 </div>
             </div>
         </div>
@@ -238,6 +278,42 @@
                     <div class="swiper-slide">
                         {% include "template/survey.html" %}
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section mobile">
+    <div class="container">
+        {{ title.item('sale', 'Акции', 'Все акции', 'red') }}
+        <div class="swiper swiper-stock">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">{% include "template/stock.html" %}</div>
+                <div class="swiper-slide">{% include "template/stock.html" %}</div>
+                <div class="swiper-slide">{% include "template/stock.html" %}</div>
+                <div class="swiper-slide">{% include "template/stock.html" %}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section mobile">
+    <div class="container">
+        {{ title.item('puzzle', 'Тесты', '') }}
+        <div class="sidebar-tests">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {% include "template/survey.html" %}
+                </div>
+                <div class="swiper-slide">
+                    {% include "template/survey.html" %}
+                </div>
+                <div class="swiper-slide">
+                    {% include "template/survey.html" %}
+                </div>
+                <div class="swiper-slide">
+                    {% include "template/survey.html" %}
                 </div>
             </div>
         </div>

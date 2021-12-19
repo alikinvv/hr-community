@@ -6,6 +6,7 @@
 {% import "template/title.html" as title %}
 {% import "template/course.html" as course %}
 {% import "template/article.html" as article %}
+{% import "template/sidebar/time.html" as time %}
 {% import "template/expert.html" as expert %}
 {% import "template/vacancy-item.html" as vacancy %}
 
@@ -35,7 +36,7 @@
 
             {% include "template/triggers.html" %}
 
-            <h2>Статьи в области HR индусктрии</h2>
+            <h1 class="h2">Статьи в области HR индусктрии</h1>
 
             <p>Если вы находитесь в поиске работы, связанной с HR направлением, то вы можете оставить заявку и
                 подгрузить ваше резюме.Мы уведомим вас о появлении новых вакансий под вашу HR специальность. Если вы в
@@ -80,6 +81,8 @@
             {% include "template/text.html" %}
         </div>
         <div class="sidebar right">
+            {{ time.item('Подпишитесь на новинки Академии HR Community Club', 'Первыми получайте новые видео ролики и
+            курсы в сфере HR индустрии', 'Подписаться', 'purple') }}
             {% include "template/sidebar/social.html" %}
 
             <h2>Подобрать:</h2>
