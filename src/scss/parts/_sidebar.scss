@@ -22,6 +22,10 @@
         }
 
         @include r(767) {
+            .sidebar__banner {
+                display: block;
+            }
+
             .title {
                 a {
                     position: static;

@@ -1,7 +1,9 @@
 {% macro item(category, right, white, icon, price, img, title, tags, bottom, userImg, userName) %}
 
 <a href="javascript:void(0)" class="item">
+    {% if category|length %}
     <div class="item__category">{{ category }}</div>
+    {% endif %}
 
     {% if right == 'icon' %}
     <div class="item__icon {{ white }}">
@@ -14,6 +16,14 @@
     {% if right == 'price' %}
     <div class="item__price">
         {{ price }}
+    </div>
+    {% endif %}
+
+    {% if right == 'close' %}
+    <div class="item__close">
+        <svg class="icon">
+            <use xlink:href="img/symbol-defs.svg#icon-close"></use>
+        </svg>
     </div>
     {% endif %}
 

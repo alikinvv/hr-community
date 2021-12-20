@@ -134,6 +134,12 @@ $('body').on('click', '.select.active .select__current', (e) => {
     $(e.currentTarget).parent().removeClass('active');
 });
 
+$('body').on('click', '.select__dropdown .select__item', (e) => {
+    $(e.currentTarget).parent().removeClass('active');
+    $(e.currentTarget).closest('.select').find('.select__current').text($(e.currentTarget).text());
+    $(e.currentTarget).closest('.select').removeClass('active');
+});
+
 $('body').on('click', '.select:not(.active) .select__current', (e) => {
     $('.select').removeClass('active');
     $(e.currentTarget).parent().addClass('active');

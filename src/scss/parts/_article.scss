@@ -265,6 +265,10 @@
         display: none;
     }
 
+    @include r(767) {
+        display: block;
+    }
+
     border-top: 1px dashed $gray;
     border-bottom: 1px dashed $gray;
     padding: 21px 0;
@@ -278,7 +282,18 @@
     }
 
     .social.line {
+        @include r(767) {
+            flex-wrap: wrap;
+            @include fcc;
+        }
+
         span {
+            @include r(767) {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
             font-weight: 600;
             font-size: 20px;
             margin-right: 30px;

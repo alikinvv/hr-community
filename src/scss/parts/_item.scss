@@ -17,6 +17,32 @@
         background: #f6faff;
     }
 
+    &__close {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        @include fcc;
+        transition: $trans;
+        border-radius: 50%;
+
+        &:hover {
+            background: $blue;
+
+            .icon {
+                fill: #fff;
+            }
+        }
+
+        .icon {
+            fill: $gray;
+            transition: $trans;
+            font-size: 8px;
+        }
+    }
+
     &__category {
         position: absolute;
         top: 18px;
