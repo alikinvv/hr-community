@@ -338,6 +338,7 @@ a {
 }
 
 input[type='text'],
+input[type='email'],
 input[type='password'] {
     padding: 6px 0;
     border: 0;
@@ -447,6 +448,15 @@ input[type='password'] {
         & + input {
             margin-left: 12px;
         }
+
+        a {
+            color: $blue;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
     &.slide {
@@ -502,6 +512,7 @@ input[type='checkbox'] {
     transition: border 0.2s ease-in-out;
     margin-top: 5px;
     appearance: none;
+    flex-shrink: 0;
 
     &:checked {
         border-color: $yellow;
@@ -576,6 +587,9 @@ p {
     & + ul.dot,
     & + ul.line,
     & + ul,
+    & + h2,
+    & + h3,
+    & + h4,
     & + ol,
     & + .blockquote,
     & + .notice,
@@ -585,7 +599,7 @@ p {
     & + .article__pagination,
     & + .grid,
     & + p {
-        margin-top: 30px;
+        margin-top: 30px !important;
     }
 
     &:last-child {
@@ -718,7 +732,7 @@ p {
         padding-top: 28px;
     }
 
-    &:not(.bg):not(.work) + .section:not(.bg) {
+    &:not(.bg):not(.work):not(.mobile) + .section:not(.bg) {
         padding-top: 0;
     }
 
@@ -731,7 +745,7 @@ p {
     }
 }
 
-.highlight {
+mark {
     background: #fff8e4;
     border-bottom: 1px solid $yellow;
 }
@@ -1223,6 +1237,7 @@ ol {
     padding-left: 14px;
     border-left: 2px solid $yellow;
     margin-bottom: 30px;
+    width: 100%;
 
     &.border {
         @include r(767) {
@@ -1465,6 +1480,10 @@ div.select {
         position: relative;
         cursor: pointer;
         user-select: none;
+
+        &.active span {
+            color: $text;
+        }
 
         .icon {
             @include r(767) {

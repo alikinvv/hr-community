@@ -66,12 +66,12 @@ $('body').on('click', '.toggle', (e) => {
 
 $('body').on('click', '.password .icon:not(.active)', (e) => {
     $(e.currentTarget).toggleClass('active');
-    $(e.currentTarget).parent().find('input').attr('type', 'text');
+    $('input[type="password"]').addClass('temp-password').attr('type', 'text');
 });
 
 $('body').on('click', '.password .icon.active', (e) => {
     $(e.currentTarget).toggleClass('active');
-    $(e.currentTarget).parent().find('input').attr('type', 'password');
+    $('input.temp-password').removeClass('temp-password').attr('type', 'password');
 });
 
 let masks = document.querySelectorAll('.phone-mask');
@@ -161,9 +161,9 @@ $('body').on('click', '.counter__minus', (e) => {
     }
 });
 
-$('.countdown .timer').countdown('2022/01/01', function (event) {
-    $(this).text(event.strftime('%D : %H : %M : %S'));
-});
+// $('.countdown .timer').countdown('2022/01/01', function (event) {
+//     $(this).text(event.strftime('%D : %H : %M : %S'));
+// });
 
 $('body').on('click', '.header__toggle', (e) => {
     $('.header__dropdown').toggleClass('active');
@@ -534,26 +534,26 @@ $('.like').on('animationend', function () {
     $(this).toggleClass('is_animating');
 });
 
-$('body').on('mouseenter', '.stars.rating g', (e) => {
-    $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+// $('body').on('mouseenter', '.stars.rating g', (e) => {
+//     $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
 
-    for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
-        $(e.currentTarget).closest('.stars.rating').find(`g[data-star="${i}"]`).addClass('active');
-    }
-});
+//     for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+//         $(e.currentTarget).closest('.stars.rating').find(`g[data-star="${i}"]`).addClass('active');
+//     }
+// });
 
-$('body').on('click', '.stars.rating g', (e) => {
-    $(e.currentTarget).closest('.stars.rating').attr('data-count', $(e.currentTarget).attr('data-star'));
-    $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
+// $('body').on('click', '.stars.rating g', (e) => {
+//     $(e.currentTarget).closest('.stars.rating').attr('data-count', $(e.currentTarget).attr('data-star'));
+//     $(e.currentTarget).closest('.stars.rating').find('g').removeClass('active');
 
-    for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
-        $(e.currentTarget).closest('.rating').find(`g[data-star="${i}"]`).addClass('active');
-    }
-});
+//     for (let i = 1; i <= $(e.currentTarget).attr('data-star'); i++) {
+//         $(e.currentTarget).closest('.rating').find(`g[data-star="${i}"]`).addClass('active');
+//     }
+// });
 
-$('body').on('mouseleave', '.stars.rating', (e) => {
-    $(e.currentTarget).find('g').removeClass('active');
-    for (let i = 1; i <= $(e.currentTarget).attr('data-count'); i++) {
-        $(e.currentTarget).find(`g[data-star="${i}"]`).addClass('active');
-    }
-});
+// $('body').on('mouseleave', '.stars.rating', (e) => {
+//     $(e.currentTarget).find('g').removeClass('active');
+//     for (let i = 1; i <= $(e.currentTarget).attr('data-count'); i++) {
+//         $(e.currentTarget).find(`g[data-star="${i}"]`).addClass('active');
+//     }
+// });

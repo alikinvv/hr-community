@@ -827,7 +827,8 @@
         @include fcc;
         margin: 0 44px;
 
-        div {
+        div,
+        a {
             @include fcc;
             font-weight: 600;
             font-size: 18px;
@@ -1228,6 +1229,14 @@
                 font-size: 12px;
                 font-weight: normal;
                 color: $gray;
+            }
+        }
+
+        .phone__body {
+            height: 35px;
+
+            input {
+                font-size: 15px;
             }
         }
 
@@ -2081,6 +2090,7 @@
             margin-bottom: 0;
         }
 
+        img,
         .icon {
             @include r(1279) {
                 margin-right: 15px;
@@ -2088,15 +2098,18 @@
 
             fill: $blue;
             font-size: 27px;
+            width: 27px;
             margin-right: 27px;
             flex-shrink: 0;
 
             &.w-64 {
                 @include r(1279) {
                     font-size: 27px;
+                    width: 27px;
                 }
 
                 font-size: 64px;
+                width: 64px;
             }
         }
     }
@@ -2814,6 +2827,8 @@
             }
 
             width: 112px;
+            height: 112px;
+            object-fit: cover;
             border-radius: 50%;
             flex-shrink: 0;
             margin-right: 32px;
@@ -3114,6 +3129,10 @@
                 fill: #fff;
             }
         }
+    }
+
+    & > div:last-child {
+        width: 100%;
     }
 
     &__icon {
@@ -3467,6 +3486,7 @@ section.target {
         @include fsn;
         width: 345px;
         flex-shrink: 0;
+        padding-right: 20px;
 
         img {
             width: 84px;
@@ -3530,6 +3550,7 @@ section.target {
             }
 
             margin-right: 130px;
+            max-width: 310px;
         }
     }
 
@@ -3656,6 +3677,15 @@ section.target {
 
             .calendar__date {
                 background: #d2dbe3;
+            }
+        }
+
+        a {
+            display: block;
+            transition: $trans;
+
+            &:hover {
+                opacity: 0.7;
             }
         }
     }
@@ -3998,7 +4028,7 @@ section.target {
 
     &__main {
         @include r(767) {
-            bottom: -19px;    
+            bottom: -19px;
         }
 
         position: absolute;
@@ -4606,4 +4636,39 @@ section.target {
 
 .simplebar-scrollbar:before {
     opacity: 0.3;
+}
+
+.text {
+    blockquote {
+        font-size: 16px;
+        padding-left: 14px;
+        border-left: 2px solid $yellow;
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    ul {
+        font-size: 16px;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 19px;
+            line-height: 1.4;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $yellow;
+            }
+        }
+    }
 }

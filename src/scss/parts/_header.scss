@@ -195,6 +195,8 @@
 
         & > img {
             width: 36px;
+            height: 36px;
+            object-fit: cover;
             border-radius: 50%;
             flex-shrink: 0;
             margin-right: 8px;
@@ -686,6 +688,7 @@
         @include r(1279) {
             flex-shrink: 0;
             font-size: 12px;
+            width: 141px;
         }
 
         @include r(767) {
@@ -695,6 +698,7 @@
         line-height: 1.4;
         margin-right: 20px;
         margin-left: auto;
+        width: 165px;
     }
 
     .btn {
