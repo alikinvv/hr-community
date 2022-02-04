@@ -91,12 +91,20 @@
             width: 50%;
             @include fcn;
 
+            &.price {
+                width: 100%;
+            }
+
             .icon {
                 font-size: 21px;
                 fill: $gray;
                 margin-right: 10px;
                 flex-shrink: 0;
             }
+        }
+
+        & + .item__bottom {
+            @include fce;
         }
     }
 
@@ -143,7 +151,7 @@
         }
 
         background: #f6faff;
-        border: 1px dashed $yellow;
+        border: 1px dashed $yellow !important;
         padding: 12px 13px;
         cursor: pointer;
         @include fcn;

@@ -90,6 +90,30 @@
         & + .divider {
             margin-top: 40px;
         }
+
+        .btn {
+            @include r(767) {
+                margin-right: 0;
+            }
+
+            white-space: nowrap;
+            margin-right: 20px;
+        }
+
+        .item__bottom {
+            width: auto;
+        }
+
+        .checkbox {
+            @include r(767) {
+                margin-right: 0;
+                @include fcs;
+            }
+
+            flex-shrink: 0;
+            margin-right: 20px;
+            margin-top: 0;
+        }
     }
 
     &__top {

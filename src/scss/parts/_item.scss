@@ -127,6 +127,9 @@
 
     &__bottom {
         @include fcn;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
 
         &-item {
             color: #b2b7bb;

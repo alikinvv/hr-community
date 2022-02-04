@@ -296,6 +296,7 @@
 
         flex-shrink: 0;
         margin-right: 25px;
+        max-width: 200px;
     }
 
     h2 {
@@ -1159,6 +1160,15 @@
     }
 }
 
+.password-error {
+    width: 100%;
+    background: rgba(240, 92, 68, 0.2);
+    border-left: 4px solid $red;
+    padding: 12px 17px;
+    margin-bottom: 20px;
+    color: $red;
+}
+
 .login {
     @include r(1660) {
         background: url(../img/login.svg) no-repeat 150% top;
@@ -1346,10 +1356,19 @@
                     width: 100%;
                 }
 
-                width: 213px;
+                width: 180px;
                 padding-left: 0;
                 padding-right: 0;
                 text-align: center;
+                opacity: 0;
+                pointer-events: none;
+                user-select: none;
+
+                &.show {
+                    opacity: 1;
+                    pointer-events: all;
+                    user-select: initial;
+                }
             }
         }
     }
@@ -2832,6 +2851,7 @@
             border-radius: 50%;
             flex-shrink: 0;
             margin-right: 32px;
+            border: 1px solid #ddd;
         }
 
         & > div {

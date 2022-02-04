@@ -554,6 +554,7 @@
         cursor: pointer;
         transition: $trans;
 
+        &.active,
         &:hover {
             color: $blue;
         }

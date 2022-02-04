@@ -169,6 +169,16 @@ $('body').on('click', '.header__toggle', (e) => {
     $('.header__dropdown').toggleClass('active');
 });
 
+$('body').on('input', '.login__flex .phone__body input', (e) => {
+    if ($(e.currentTarget).val().length >= 18) {
+        $('.login__flex .btn.width').addClass('show');
+    }
+
+    if ($(e.currentTarget).val().length === 0) {
+        $('.login__flex .btn.width').removeClass('show');
+    }
+});
+
 $('body').on('click', '.header__notification-wrap', (e) => {
     $('.header__notification-tip').toggleClass('active');
 });
@@ -557,3 +567,39 @@ $('.like').on('animationend', function () {
 //         $(e.currentTarget).find(`g[data-star="${i}"]`).addClass('active');
 //     }
 // });
+
+function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text).then(
+        function () {
+            console.log('Async: Copying to clipboard was successful!');
+        },
+        function (err) {
+            console.error('Async: Could not copy text: ', err);
+        }
+    );
+}
+
+$('body').on('click', '.copy-btn', (e) => {
+    copyTextToClipboard($(e.currentTarget).parent().find('.copy-text').text());
+});
