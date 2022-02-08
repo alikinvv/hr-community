@@ -3124,6 +3124,53 @@
     }
 }
 
+.lock {
+    @include r(767) {
+        white-space: normal;
+        left: 0;
+        transform: translateX(0) translateY(-50%);
+
+        br {
+            display: none;
+        }
+    }
+
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    @include fcc;
+    align-items: center !important;
+    white-space: nowrap;
+
+    h3 {
+        margin-bottom: 0;
+    }
+
+    &-parent {
+        position: relative;
+
+        & > div:not(.lock) {
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        margin-left: 15px;
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
 .doc {
     @include r(767) {
         padding: 16px 15px;
@@ -4689,6 +4736,55 @@ section.target {
                 border-radius: 50%;
                 background: $yellow;
             }
+        }
+    }
+}
+
+.result {
+    &__desc {
+        color: $gray;
+        margin-bottom: 35px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__item {
+        @include r(930) {
+            width: 100%;
+        }
+
+        display: block;
+        width: 905px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+
+        &:hover {
+            span {
+                color: $yellow;
+            }
+        }
+
+        & + .pagination {
+            justify-content: flex-start;
+            margin-top: 60px;
+        }
+
+        span {
+            @include r(767) {
+                font-size: 16px;
+            }
+
+            color: $blue;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+            display: block;
+            transition: $trans;
+            @include ellipsis;
+            white-space: nowrap;
+            margin-bottom: 5px;
         }
     }
 }
